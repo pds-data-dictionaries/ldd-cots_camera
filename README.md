@@ -17,7 +17,7 @@ The Commercial Off The Shelf Camera dictionary provides classes and attributes f
 metadata specific to Commercial Off The Shelf (COTS) cameras. It will often contain EXIF-type keywords specific to a given camera model. The intent is to hold metadata that does not fit elsewhere. For example, if the IMG LDD has a place to store the metadata, it should generally be used in preference to this LDD.
 
 ### Steward
-Bob Deen (@rgdeen), IMG
+Bob Deen (@rgdeen), Cartography and Imaging Sciences (IMG)
 <!-- EXAMPLE
      Anne Raugh (@acraugh), Small Bodies Node (SBN)
 -->
