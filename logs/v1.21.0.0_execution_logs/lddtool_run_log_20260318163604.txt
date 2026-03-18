@@ -1,0 +1,215 @@
+
+>>  INFO LDDTOOL Version: 16.0.0
+>>  INFO IM Version Id: 1.21.0.0
+>>  INFO IM Namespace Id: pds
+>>  INFO IM Label Version Id: 1.27
+>>  INFO Date: Wed Mar 18 16:36:05 UTC 2026
+>>  INFO PARENT_DIR: /tmp/lddtool-16.0.0/Data/
+
+>>> INFO Init:  - Config.Properties Namespace Id Using:pds
+>>> INFO Init:  - LDD Dictionary_Type is Discipline
+>>> INFO Init:  - Config.Properties Namespace Id Using:pds
+>>> INFO Init:  - LDD Dictionary_Type is Discipline
+>>> INFO Attribute: <af_aperture> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <af_area_mode> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <af_c_priority_selection> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <af_detection_method> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <af_fine_tune> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <af_info_2_version> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <af_point_brightness> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <af_points_in_focus> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <af_points_used> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <af_s_priority_selection> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <auto_bracket_mode_m> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <auto_bracket_order> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <block_shot_af_response> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <brightness> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <camera_name> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <center_weighted_area_size> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <cl_mode_shooting_speed> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <clarity> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <color_balance_version> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <contrast> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <custom_settings_bank> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <directory_number> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <easy_exposure_compensation> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <effective_max_aperture> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <exit_pupil_position> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <exposure_bracket_value> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <exposure_comp_step_size> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <exposure_control_step_size> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <exposure_delay_mode> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <exposure_difference> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <file_info_version> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <file_number> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <flash_info_version> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <flash_mode> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <flicker_reduction> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <flicker_reduction_indicator> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <focus_point_schema> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <focus_point_wrap> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <high_iso_noise_reduction> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <hue> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <iso_auto_high_limit> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <iso_auto_shutter_time> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <iso_step_size> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <lens_data_version> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <lens_f_stops> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <lens_id_number> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <lens_type> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <max_aperture_at_max_focal> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <max_aperture_at_min_focal> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <max_continuous_release> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <max_focal_length> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <mcu_version> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <memory_card_number> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <min_focal_length> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <multi_exposure_auto_gain> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <multi_exposure_mode> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <multi_exposure_shots> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <multi_exposure_version> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <noise_reduction> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <number_of_focus_points> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <pitch> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <pitch_status> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <primary_af_point> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <raw_image_center_line> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <raw_image_center_sample> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <roll> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <roll_status> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <saturation> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <sharpness> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <shooting_mode> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <shot_info_version> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <shutter_count> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <vignette_control> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <yaw> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <yaw_status> - A 'nillable' attribute was found that is not a required attribute in at least one class.
+>>> INFO Attribute: <number_of_focus_points> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <raw_image_center_line> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <raw_image_center_sample> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <shutter_count> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <max_continuous_release> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <multi_exposure_shots> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <directory_number> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <file_number> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <memory_card_number> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <lens_id_number> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <mcu_version> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <directory_number> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <file_number> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <lens_id_number> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <max_continuous_release> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <mcu_version> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <memory_card_number> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <multi_exposure_shots> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <number_of_focus_points> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <raw_image_center_line> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <raw_image_center_sample> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> INFO Attribute: <shutter_count> - The default minimum value provided by the attribute's data type is being overridden with 0
+>>> WARNING Init:  - Config.Properties Namespace Id Not Found:cots_camera
+>>> WARNING Init:  - Config.Properties Namespace Id Not Found:example
+>>> WARNING Attribute: <af_aperture> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <af_area_mode> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <af_c_priority_selection> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <af_detection_method> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <af_fine_tune> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <af_info_2_version> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <af_point_brightness> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <af_points_in_focus> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <af_points_used> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <af_s_priority_selection> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <auto_bracket_mode_m> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <auto_bracket_order> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <block_shot_af_response> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <brightness> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <camera_name> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <camera_type> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <center_weighted_area_size> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <cl_mode_shooting_speed> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <clarity> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <color_balance_version> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <contrast> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <custom_settings_bank> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <directory_number> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <easy_exposure_compensation> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <effective_max_aperture> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <exit_pupil_position> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <exposure_bracket_value> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <exposure_comp_step_size> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <exposure_control_step_size> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <exposure_delay_mode> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <exposure_difference> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <file_info_version> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <file_number> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <flash_info_version> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <flash_mode> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <flicker_reduction> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <flicker_reduction_indicator> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <focus_point_schema> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <focus_point_wrap> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <high_iso_noise_reduction> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <hue> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <iso_auto_high_limit> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <iso_auto_shutter_time> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <iso_step_size> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <lens_data_version> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <lens_f_stops> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <lens_id_number> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <lens_type> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <max_aperture_at_max_focal> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <max_aperture_at_min_focal> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <max_continuous_release> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <max_focal_length> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <mcu_version> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <memory_card_number> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <min_focal_length> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <multi_exposure_auto_gain> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <multi_exposure_mode> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <multi_exposure_shots> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <multi_exposure_version> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <noise_reduction> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <number_of_focus_points> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <pitch> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <pitch_status> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <primary_af_point> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <raw_image_center_line> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <raw_image_center_sample> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <roll> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <roll_status> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <saturation> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <sharpness> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <shooting_mode> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <shot_info_version> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <shutter_count> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <vignette_control> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <yaw> - This local attribute was not used in an Association.
+>>> WARNING Attribute: <yaw_status> - This local attribute was not used in an Association.
+>>> WARNING Class: <My_First_LDD> - The class name is duplicated in this local data dictionary.
+>>> WARNING Attribute: <my_first_attribute> - The attribute name is duplicated in this local data dictionary.
+>>> WARNING Attribute: <lens_type> - The 'type' attribute must have at least one permissible value.
+>>> WARNING Attribute: <camera_type> - An attribute with the enumeration_flag = false must not have any permissible values.
+
+ -- LDDTool Execution Summary --
+     82 warning(s)
+     0 error(s)
+     0 fatal error(s)
+
+Input:
+
+     - IM Version: 1L00
+     - PDS4 Flag: true
+     - LDD Flag: true
+     - IM Version: true
+     - Export JSON Flag: true
+
+     - Ingest LDD(s): /home/runner/work/ldd-cots_camera/ldd-cots_camera/src/PDS4_COTS_Camera_IngestLDD.xml, /home/runner/work/ldd-cots_camera/ldd-cots_camera/src/PDS4_EXAMPLE_IngestLDD.xml
+
+Output:
+
+     - ./PDS4_EXAMPLE_1L00_1000.xsd
+     - ./PDS4_EXAMPLE_1L00_1000.sch
+     - ./PDS4_EXAMPLE_1L00_1000.xml
+     - ./export/PDS4_PDS_1L00.JSON
+
+>>  INFO Exit(0)
