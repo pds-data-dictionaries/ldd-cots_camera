@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+    href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1O00.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1O00.xsd">
+
+  <name>COTS Camera</name>
+  <ldd_version_id>1.0.0.0</ldd_version_id>
+  <dictionary_type>Discipline</dictionary_type>
+  <full_name>Gill, Kevin M.</full_name>
+  <steward_id>img</steward_id>
+  <namespace_id>cots_camera</namespace_id>
+  <comment>
+    This Discipline LDD is intended for metadata specific to Commercial Off The Shelf (COTS)
+    cameras. It will often contain EXIF-type keywords specific to a given camera model. The intent
+    is to hold metadata that does not fit elsewhere. For example, if the IMG LDD has a place to
+    store the metadata, it should generally be used in preference to this LDD.
+  </comment>
+  <last_modification_date_time>2026-03-17T00:00:00Z</last_modification_date_time>
+
+  <!-- Start attribute definitions -->
+  <DD_Attribute>
+    <name>camera_type</name>
+    <version_id>1.0</version_id>
+    <local_identifier>camera_type</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>The general type of camera. Corresponds to which type_Metadata class is used in this
+      label. Type=None should not generally be used but is available if none of the type_Metadata
+      classes apply.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <DD_Permissible_Value>
+        <value>Nikon</value>
+        <value_meaning>Nikon</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>None</value>
+        <value_meaning>None</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>camera_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>camera_name</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>The name including model number of the camera. This should be sufficiently precise
+      that someone could go purchase a similar camera (assuming they're still being sold).</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <!-- Start attributes for Camera_Orientation class -->
+
+  <DD_Attribute>
+    <name>pitch</name>
+    <version_id>1.0</version_id>
+    <local_identifier>pitch</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>The pitch angle of the camera body, generally perpendicular to the lens axis.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+      <specified_unit_id>deg</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>pitch_status</name>
+    <version_id>1.0</version_id>
+    <local_identifier>pitch_status</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the trustworthiness of the pitch measurement. Possible values include
+      "Fine", "Coarse", "Unusable". Note that unusable values may be simply omitted.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>roll</name>
+    <version_id>1.0</version_id>
+    <local_identifier>roll</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>The roll angle of the camera body, generally about the lens axis.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+      <specified_unit_id>deg</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>roll_status</name>
+    <version_id>1.0</version_id>
+    <local_identifier>roll_status</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the trustworthiness of the roll measurement. Possible values include
+      "Fine", "Coarse", "Unusable". Note that unusable values may be simply omitted.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>yaw</name>
+    <version_id>1.0</version_id>
+    <local_identifier>yaw</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>The yaw angle of the camera body, generally about the vertical axis at the camera
+      location.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+      <specified_unit_id>deg</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>yaw_status</name>
+    <version_id>1.0</version_id>
+    <local_identifier>yaw_status</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the trustworthiness of the yaw measurement. Possible values include
+      "Fine", "Coarse", "Unusable". Note that unusable values may be simply omitted.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <!-- Start attributes for Nikon_Metadata class -->
+
+
+  <!-- Start attributes for Autofocus class -->
+
+  <DD_Attribute>
+    <name>af_aperture</name>
+    <version_id>1.0</version_id>
+    <local_identifier>af_aperture</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>The size of the lens opening, or aperture value, which controls the amount of light
+      entering the camera during autofocusing.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>af_area_mode</name>
+    <version_id>1.0</version_id>
+    <local_identifier>af_area_mode</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Refers to the autofocus mode selected for focusing. Includes Single Point, Dynamic
+      Area, and/or Auto Area AF. Mode availability depends on the capabilities of a specific camera
+      model.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>af_c_priority_selection</name>
+    <version_id>1.0</version_id>
+    <local_identifier>af_c_priority_selection</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates whether the camera will prioritize achieving focus or shot capture while
+      in continuous autofocus mode and if the subject cannot be quickly locked on. Focus Priority
+      will only capture a photograph once the subject has been properly focused. Release Priority
+      will take a shot regardless of whether or not focus has been achieved.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>af_detection_method</name>
+    <version_id>1.0</version_id>
+    <local_identifier>af_detection_method</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Refers to the method the autofocus system uses to detect focus. This can include
+      methods such as Contrast Detection or Phase Detection, depending on the capabilities of the
+      camera model.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>af_fine_tune</name>
+    <version_id>1.0</version_id>
+    <local_identifier>af_fine_tune</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Details, typically expressed in micro-adjustments (e.g., +5 or -10), on any
+      calibration made to the autofocus system to improve accuracy.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>af_info_2_version</name>
+    <version_id>1.0</version_id>
+    <local_identifier>af_info_2_version</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the version number of the camera's autofocus information.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>af_point_brightness</name>
+    <version_id>1.0</version_id>
+    <local_identifier>af_point_brightness</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Refers to the intensity of the indicator that shows which focus point(s) are
+      selected.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>af_points_in_focus</name>
+    <version_id>1.0</version_id>
+    <local_identifier>af_points_in_focus</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates how many of the selected autofocus points achieved focus on the subject.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>af_points_used</name>
+    <version_id>1.0</version_id>
+    <local_identifier>af_points_used</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates how many autofocus points where actively engaged during the shot.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>af_s_priority_selection</name>
+    <version_id>1.0</version_id>
+    <local_identifier>af_s_priority_selection</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates whether the camera prioritizes on achieving a sharp focus before allowing
+      the shutter to release in single autofocus mode. Focus Priority will only release the shutter
+      once it has achieved focus on the subject. Release Priority will allow the shutter to be
+      released even if focus has not been achieved.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>block_shot_af_response</name>
+    <version_id>1.0</version_id>
+    <local_identifier>block_shot_af_response</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Describes the camera's autofocus behaviour when shooting in burst mode. This
+      indicates whether focus is locked for the entire burst or adjusted between shots.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>focus_point_schema</name>
+    <version_id>1.0</version_id>
+    <local_identifier>focus_point_schema</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Describes the arragements or pattern of selected autofocus points.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>focus_point_wrap</name>
+    <version_id>1.0</version_id>
+    <local_identifier>focus_point_wrap</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates whether focus points wrap around when reaching the edge of the selection
+      grid. Typically On or Off.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>number_of_focus_points</name>
+    <version_id>1.0</version_id>
+    <local_identifier>number_of_focus_points</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates how many autofocus points are available to the camera.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>primary_af_point</name>
+    <version_id>1.0</version_id>
+    <local_identifier>primary_af_point</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Specifies which autofocus point was primary when autofocusing. Typically expressed
+      as an X, Y coordinate or numerical identifier of the autofocus point in use.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <!-- Start attributes for Camera_Properties class -->
+
+  <DD_Attribute>
+    <name>exit_pupil_position</name>
+    <version_id>1.0</version_id>
+    <local_identifier>exit_pupil_position</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the location of the exit pupil relative to the camera body or lens mount.
+      This is typically measured in millimeters, affecting how light enters the camera. </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>flash_info_version</name>
+    <version_id>1.0</version_id>
+    <local_identifier>flash_info_version</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the version of the flash-related metadata recorded. </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>raw_image_center_line</name>
+    <version_id>1.0</version_id>
+    <local_identifier>raw_image_center_line</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Specifies the coordinates of the center of the raw image as captired by the sensor</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>raw_image_center_sample</name>
+    <version_id>1.0</version_id>
+    <local_identifier>raw_image_center_sample</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>TODO</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+
+  <DD_Attribute>
+    <name>shutter_count</name>
+    <version_id>1.0</version_id>
+    <local_identifier>shutter_count</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the number of times the camera's shutter has been actuated since it's
+      first use. </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <!-- Start attributes for Camera_Settings class -->
+
+  <DD_Attribute>
+    <name>brightness</name>
+    <version_id>1.0</version_id>
+    <local_identifier>brightness</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Measures the overall lightness or darkness of the image as captured</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>clarity</name>
+    <version_id>1.0</version_id>
+    <local_identifier>clarity</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the setting adjustment of the midtone contrast of an image. This
+      adjustment affects the perceived sharpness and detail, specially the midtones, enhancing the
+      overall texture without significantly altering highlights and shadows.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>color_balance_version</name>
+    <version_id>1.0</version_id>
+    <local_identifier>color_balance_version</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the version of the color balance adjustments or algorithms applied to the
+      image.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>contrast</name>
+    <version_id>1.0</version_id>
+    <local_identifier>contrast</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Reflects the difference in brightness between the darkest and lightest parts of the
+      image.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>custom_settings_bank</name>
+    <version_id>1.0</version_id>
+    <local_identifier>custom_settings_bank</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Numeric identifier representing the custom settings bank in use (e.g. Bank 1, Bank
+      2). The Custom Settings Bank allows users to store and select customized camera settings for
+      specific shooting scenarios.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+
+  <DD_Attribute>
+    <name>flash_mode</name>
+    <version_id>1.0</version_id>
+    <local_identifier>flash_mode</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Specifies the specific settings for the flash during the exposure, such as Normal or
+      Red-Eye Reduction.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>flicker_reduction</name>
+    <version_id>1.0</version_id>
+    <local_identifier>flicker_reduction</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Refers to a feature that helps reduce the effects of flickering light sources, such
+      as flourescent or LED lights, which can cause banding or unwanted color shifts in images.
+      Flicker reduction aims to synchronize the camera's shutter speed with the frequency of
+      flickering lights, minimizing artifacts and ensuring more consistent exposure and color
+      balance. </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>flicker_reduction_indicator</name>
+    <version_id>1.0</version_id>
+    <local_identifier>flicker_reduction_indicator</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates whether flicker reduction was used during the exposure, expressed as On or
+      Off.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>high_iso_noise_reduction</name>
+    <version_id>1.0</version_id>
+    <local_identifier>high_iso_noise_reduction</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the method used in applying High ISO Noise Reduction.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+
+  <DD_Attribute>
+    <name>noise_reduction</name>
+    <version_id>1.0</version_id>
+    <local_identifier>noise_reduction</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Refers to whether the camera applied noise reduction algorithms to high-ISO images.
+      Typically shown as On or Off.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>hue</name>
+    <version_id>1.0</version_id>
+    <local_identifier>hue</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>A numeric scale or percentage of adjustment to the overall color tint of the image.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>saturation</name>
+    <version_id>1.0</version_id>
+    <local_identifier>saturation</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>A numeric scale or percentage of intensity of colors in the image.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>sharpness</name>
+    <version_id>1.0</version_id>
+    <local_identifier>sharpness</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Refers to the clarity and detail in the image expressed in a numerical scale (e.g.,
+      0 to 100)</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>shooting_mode</name>
+    <version_id>1.0</version_id>
+    <local_identifier>shooting_mode</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the camera mode at the time of capture, affecting settings like focus and
+      exposure. Includes Single Shot, Continuous, or Timer, depending on the capabilities of the
+      camera.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>shot_info_version</name>
+    <version_id>1.0</version_id>
+    <local_identifier>shot_info_version</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the version of detailed shooting parameters used for parsing specific
+      camera settings.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>vignette_control</name>
+    <version_id>1.0</version_id>
+    <local_identifier>vignette_control</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates whether the camera applied any correction for vignetting (brightness
+      fall-off around corners).</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <!-- Start attributes for Nikon_Exposure class -->
+
+  <DD_Attribute>
+    <name>auto_bracket_mode_m</name>
+    <version_id>1.0</version_id>
+    <local_identifier>auto_bracket_mode_m</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Refers to the specific mode used for exposure bracketing, often expressed in terms
+      of settings. Could include modes like Exposure, Flash, or White Balance bracketing.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>auto_bracket_order</name>
+    <version_id>1.0</version_id>
+    <local_identifier>auto_bracket_order</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Denotes the order in which bracketed images are taken, such as whether they are
+      taken from underexposed to overexposed, or vice versa.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>center_weighted_area_size</name>
+    <version_id>1.0</version_id>
+    <local_identifier>center_weighted_area_size</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Defines the portion of the frame that the camera evaluates for exposure in
+      Center-Weighted metering mode. This is typically expressed as a percentage.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>cl_mode_shooting_speed</name>
+    <version_id>1.0</version_id>
+    <local_identifier>cl_mode_shooting_speed</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Continuous Low mode shooting speed indicates the frame rate at which the camera
+      captures image in continuous low mode. Usually expressed in frames per second (fps).</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>easy_exposure_compensation</name>
+    <version_id>1.0</version_id>
+    <local_identifier>easy_exposure_compensation</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates whether the +/- button was needed to set exposure compensation with the
+      main command dial</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>exposure_bracket_value</name>
+    <version_id>1.0</version_id>
+    <local_identifier>exposure_bracket_value</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the amount by which exposure is varied in a series of bracketed shots.
+      Represented in stops (e.g., +/- 1.0)</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>exposure_comp_step_size</name>
+    <version_id>1.0</version_id>
+    <local_identifier>exposure_comp_step_size</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>TODO</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>exposure_control_step_size</name>
+    <version_id>1.0</version_id>
+    <local_identifier>exposure_control_step_size</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>TODO</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>exposure_delay_mode</name>
+    <version_id>1.0</version_id>
+    <local_identifier>exposure_delay_mode</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>TODO</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>exposure_difference</name>
+    <version_id>1.0</version_id>
+    <local_identifier>exposure_difference</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Records how much the exposure deviates from the camera's metered exposure. Often
+      expressed in stops (e.g., +1.0 or -0.5)</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>iso_auto_high_limit</name>
+    <version_id>1.0</version_id>
+    <local_identifier>iso_auto_high_limit</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Specifies the maximum ISO sensitivity that the camera will automatically adjust to
+      when in Auto ISO mode.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>iso_auto_shutter_time</name>
+    <version_id>1.0</version_id>
+    <local_identifier>iso_auto_shutter_time</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the maximum shutter speed that the camera will use when set to Auto ISO
+      mode. This defines the slowest shutter speed at which the camera will operate to avoid motion
+      blur when increasing ISO sensitivity.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>iso_step_size</name>
+    <version_id>1.0</version_id>
+    <local_identifier>iso_step_size</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the increments made in changes to ISO sensitivity.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>max_continuous_release</name>
+    <version_id>1.0</version_id>
+    <local_identifier>max_continuous_release</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Specifies the maximum number of shots the camera can take in a continuous shooting
+      burst.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>multi_exposure_auto_gain</name>
+    <version_id>1.0</version_id>
+    <local_identifier>multi_exposure_auto_gain</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates whether automatic gain control was applied to balance exposure across
+      multiple exposures, typically On or Off.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>multi_exposure_mode</name>
+    <version_id>1.0</version_id>
+    <local_identifier>multi_exposure_mode</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates which multiple exposure mode was used. Series takes a series of multiple
+      exposures per shot resulting in multiple files. Single Photo will create only a single
+      combined image.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>multi_exposure_shots</name>
+    <version_id>1.0</version_id>
+    <local_identifier>multi_exposure_shots</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Denotes the number of exposures combined into a single image.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>multi_exposure_version</name>
+    <version_id>1.0</version_id>
+    <local_identifier>multi_exposure_version</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the version of the multi-exposure settings used in the camera.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <!-- Start attributes for File_Information class -->
+
+  <DD_Attribute>
+    <name>directory_number</name>
+    <version_id>1.0</version_id>
+    <local_identifier>directory_number</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Designates the folder or directory within the memory card that contains the file</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>file_info_version</name>
+    <version_id>1.0</version_id>
+    <local_identifier>file_info_version</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the version of the metadata structure of the file itself. </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>file_number</name>
+    <version_id>1.0</version_id>
+    <local_identifier>file_number</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Refers to the unique identifier assigned to the image file, typically a sequential
+      number.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>memory_card_number</name>
+    <version_id>1.0</version_id>
+    <local_identifier>memory_card_number</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the specific memory card in the camera where the image was saved,
+      particaraly in cameras with more than one card slots.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+
+  <!-- Start attributes for Lens_Properties class -->
+
+  <DD_Attribute>
+    <name>effective_max_aperture</name>
+    <version_id>1.0</version_id>
+    <local_identifier>effective_max_aperture</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the largest aperture (in terms of light-gathering ability) used during the
+      exposure, which may differ from the physical maximum aperture due to verious settings or
+      conditions. This is expressed as an f-stop (e.g., f/4.0).</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>lens_data_version</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lens_data_version</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Signifies the version of the lens information records which may include updates
+      specifications or characteristics </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>lens_f_stops</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lens_f_stops</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Refers to the maximum and minimum aperture settings available on the lens. This is
+      expressed in f-stop values (e.g., f/2.8 to f/22)</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>lens_id_number</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lens_id_number</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates a unique numeric identifier corresponding to the lens model used for the
+      image capture.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>lens_type</name>
+    <version_id>1.0</version_id>
+    <local_identifier>lens_type</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Identifies the generation and techology of the attached lens, expressed as a
+      numerical value which can be correlated to identifiers using specialized metadata types such
+      as ExifTool.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>max_aperture_at_max_focal</name>
+    <version_id>1.0</version_id>
+    <local_identifier>max_aperture_at_max_focal</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the widest aperture setting when the lens is at its maximum focal length,
+      expressed as an f-stop (e.g., f/4.0)</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>max_aperture_at_min_focal</name>
+    <version_id>1.0</version_id>
+    <local_identifier>max_aperture_at_min_focal</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the widest aperture setting when the lens is at its minimum focal length,
+      expressed as an f-stop (e.g., f/4.0)</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>max_focal_length</name>
+    <version_id>1.0</version_id>
+    <local_identifier>max_focal_length</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Indicates the longest distance, in millimeters, that the lens can focus on.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>min_focal_length</name>
+    <version_id>1.0</version_id>
+    <local_identifier>min_focal_length</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Denotes the shortest distance, in millimeters, that the lens can focus on while
+      still producing a sharp image.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>mcu_version</name>
+    <version_id>1.0</version_id>
+    <local_identifier>mcu_version</local_identifier>
+    <nillable_flag>true</nillable_flag>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>Represents the version of the microcontroller unit (MCU) firmware in the camera body
+      that processes the images. </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
+      <minimum_value>0</minimum_value>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+
+  <!-- DELETE: Template Stuff -->
+  <DD_Attribute>
+    <name>my_first_attribute</name>
+    <version_id>1.0</version_id>
+    <local_identifier>my_first_attribute</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>Jane Doe</submitter_name>
+    <definition>My first attribute
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Class>
+    <name>My_First_LDD</name>
+    <version_id>1.0</version_id>
+    <local_identifier>First</local_identifier>
+    <submitter_name>Jane Doe</submitter_name>
+    <definition>My first class</definition>
+    <element_flag>true</element_flag>
+    <DD_Association>
+      <identifier_reference>my_first_attribute</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>1</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
+</Ingest_LDD>
