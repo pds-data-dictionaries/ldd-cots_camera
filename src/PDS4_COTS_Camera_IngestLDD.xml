@@ -18,14 +18,19 @@
     cameras. It will often contain EXIF-type keywords specific to a given camera model. The intent
     is to hold metadata that does not fit elsewhere. For example, if the IMG LDD has a place to
     store the metadata, it should generally be used in preference to this LDD.
+
+    ## CHANGE LOG ##
+    1.0.0.0
+    - Initial implementation with Nikon support considerations
+
   </comment>
-  <last_modification_date_time>2026-03-17T00:00:00Z</last_modification_date_time>
+  <last_modification_date_time>2026-03-24T00:00:00Z</last_modification_date_time>
 
   <!--                     -->
   <!--  Attributes: BEGIN  -->
   <!--                     -->
 
-  <!-- Start attribute definitions -->
+  <!-- Start attributes for COTS_Camera class -->
   <DD_Attribute>
     <name>camera_type</name>
     <version_id>1.0</version_id>
@@ -812,7 +817,10 @@
     <local_identifier>exposure_comp_step_size</local_identifier>
     <nillable_flag>true</nillable_flag>
     <submitter_name>Kevin Gill</submitter_name>
-    <definition>TODO</definition>
+    <definition>Exposure compensation is a setting that allows the photographer to adjust the
+      standard exposure determined by the camera's metering system. The exposure compensation step
+      size defines the increments
+      used when moving the compensation value up (overexposure) or down (underexposure).</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -826,7 +834,8 @@
     <local_identifier>exposure_control_step_size</local_identifier>
     <nillable_flag>true</nillable_flag>
     <submitter_name>Kevin Gill</submitter_name>
-    <definition>TODO</definition>
+    <definition>Exposure correction increment per click of the dial when adjusting camera settings
+      such as aperture, shutter speed, or exposure compensation increments.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -840,7 +849,7 @@
     <local_identifier>exposure_delay_mode</local_identifier>
     <nillable_flag>true</nillable_flag>
     <submitter_name>Kevin Gill</submitter_name>
-    <definition>TODO</definition>
+    <definition>Indicates wether an exposure delay was employed prior to releasing the shutter.</definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
