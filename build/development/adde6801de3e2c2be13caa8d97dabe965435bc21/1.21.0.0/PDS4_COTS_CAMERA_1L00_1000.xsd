@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:cots_camera  Version:1.0.0.0 - Tue Mar 24 18:10:13 UTC 2026 -->
+  <!-- PDS4 XML/Schema for Name Space Id:cots_camera  Version:1.0.0.0 - Wed May 13 22:43:20 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.21.0.0 - System Build 14.0 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -19,17 +19,10 @@
  
   <xs:annotation>
     <xs:documentation>
-
-    This Discipline LDD is intended for metadata specific to Commercial Off The Shelf (COTS)
-    cameras. It will often contain EXIF-type keywords specific to a given camera model. The intent
-    is to hold metadata that does not fit elsewhere. For example, if the IMG LDD has a place to
-    store the metadata, it should generally be used in preference to this LDD.
-
-    ## CHANGE LOG ##
-    1.0.0.0
-    - Initial implementation with Nikon support considerations
-
-  
+ This Discipline LDD is intended for metadata specific to Commercial Off The Shelf (COTS) cameras. It will
+    often contain EXIF-type keywords specific to a given camera model. The intent is to hold metadata that does not fit
+    elsewhere. For example, if the IMG LDD has a place to store the metadata, it should generally be used in preference
+    to this LDD. ## CHANGE LOG ## 1.0.0.0 - Initial implementation with Nikon support considerations 
     </xs:documentation>
   </xs:annotation>
  
@@ -71,10 +64,9 @@
         LDD.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="camera_type" type="cots_camera:camera_type" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="camera_vendor" type="cots_camera:camera_vendor" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="camera_name" nillable="true" type="cots_camera:camera_name" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="Camera_Orientation" type="cots_camera:Camera_Orientation" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Nikon_Metadata" type="cots_camera:Nikon_Metadata" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -202,36 +194,6 @@
       <xs:element name="max_focal_length" nillable="true" type="cots_camera:max_focal_length" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="min_focal_length" nillable="true" type="cots_camera:min_focal_length" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="mcu_version" nillable="true" type="cots_camera:mcu_version" minOccurs="0" maxOccurs="1"> </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="Nikon_Metadata">
-    <xs:annotation>
-      <xs:documentation>This class reproduces Nikon-specific keywords
-        from the EXIF metadata for Nikon Electronic Format (NEF) images.
-        These keywords are generally undocumented, representing
-        parameters for Nikon-specific algorithms and camera
-        capabilities. The keywords that seem most useful are represented
-        in this LDD. Although the meanings are not precisely defined,
-        they can often be inferred at least in a qualitative sense from
-        the name, and the open source community is likely to provide
-        more details over time. Some of the keywords here seem to be
-        redundant with multimission keywords in other LDDs such as
-        Imaging. However, a closer look shows different valid lists and
-        subtle differences in meaning. In these cases we retain both.
-        Some keywords unambiguously match existing Imaging keywords;
-        these are generally not duplicated here. The keywords have been
-        arbitrarily grouped into categories in order to help organize
-        them; these categories are not reflected in the NEF labels
-        themselves.</xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="Autofocus" type="cots_camera:Autofocus" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Camera_Properties" type="cots_camera:Camera_Properties" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Camera_Settings" type="cots_camera:Camera_Settings" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Exposure" type="cots_camera:Exposure" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="File_Information" type="cots_camera:File_Information" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Lens_Properties" type="cots_camera:Lens_Properties" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -445,12 +407,10 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:simpleType name="camera_type">
+  <xs:simpleType name="camera_vendor">
     <xs:annotation>
-      <xs:documentation>The general type of camera. Corresponds to which
-        type_Metadata class is used in this label. Type=None should not
-        generally be used but is available if none of the type_Metadata
-        classes apply.</xs:documentation>
+      <xs:documentation>Specifies the camera vendor, make, or
+        manufacturer.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="1"/>

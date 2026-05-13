@@ -1,12 +1,13 @@
 
->>  INFO LDDTOOL Version: 16.0.0
+>>  INFO LDDTOOL Version: 16.1.0
 >>  INFO IM Version Id: 1.21.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.27
->>  INFO Date: Tue Mar 24 18:10:13 UTC 2026
->>  INFO PARENT_DIR: /tmp/lddtool-16.0.0/Data/
+>>  INFO Date: Wed May 13 22:43:20 UTC 2026
+>>  INFO PARENT_DIR: /tmp/lddtool-16.1.0/Data/
 
->>> INFO Init:  - Config.Properties Namespace Id Using:pds
+>>> INFO Init:  - Config.Properties Namespace Id Found:cots_camera
+>>> INFO Init:  - Config.Properties Namespace Id Using:cots_camera
 >>> INFO Init:  - LDD Dictionary_Type is Discipline
 >>> INFO Attribute: <camera_name> - A 'nillable' attribute was found that is not a required attribute in at least one class.
 >>> INFO Attribute: <pitch> - A 'nillable' attribute was found that is not a required attribute in at least one class.
@@ -94,12 +95,11 @@
 >>> INFO Attribute: <memory_card_number> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <lens_id_number> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <mcu_version> - The default minimum value provided by the attribute's data type is being overridden with 0
->>> WARNING Init:  - Config.Properties Namespace Id Not Found:cots_camera
 >>> WARNING Attribute: <lens_type> - The 'type' attribute must have at least one permissible value.
->>> WARNING Attribute: <camera_type> - An attribute with the enumeration_flag = false must not have any permissible values.
+>>> WARNING Attribute: <camera_vendor> - An attribute with the enumeration_flag = false must not have any permissible values.
 
  -- LDDTool Execution Summary --
-     3 warning(s)
+     2 warning(s)
      0 error(s)
      0 fatal error(s)
 

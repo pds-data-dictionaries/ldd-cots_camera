@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        16.0.0
+   LDDTool Version        16.1.0
    LDD Version Id:        1.0.0.0
    LDD Label Version Id:  1.27
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Tue Mar 24 18:10:13 UTC 2026
+   Time                   Wed May 13 22:43:20 UTC 2026
    Common Schema          [PDS4_PDS_1L00.xsd]
    Common Schematron      [PDS4_PDS_1L00.sch]
    IM Version Id:         1.21.0.0
@@ -28,9 +28,9 @@ Parameters:
    Merge with Master      false
 
 Summary:
-   Classes                9
+   Classes                8
    Attributes             76
-   Associations           84
+   Associations           77
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -43,26 +43,19 @@ Parsed Input - Header:
    Full Name              Gill, Kevin M.
    Steward                img
    Namespace Id           cots_camera
-   Comment                
-    This Discipline LDD is intended for metadata specific to Commercial Off The Shelf (COTS)
-    cameras. It will often contain EXIF-type keywords specific to a given camera model. The intent
-    is to hold metadata that does not fit elsewhere. For example, if the IMG LDD has a place to
-    store the metadata, it should generally be used in preference to this LDD.
-
-    ## CHANGE LOG ##
-    1.0.0.0
-    - Initial implementation with Nikon support considerations
-
-  
+   Comment                 This Discipline LDD is intended for metadata specific to Commercial Off The Shelf (COTS) cameras. It will
+    often contain EXIF-type keywords specific to a given camera model. The intent is to hold metadata that does not fit
+    elsewhere. For example, if the IMG LDD has a place to store the metadata, it should generally be used in preference
+    to this LDD. ## CHANGE LOG ## 1.0.0.0 - Initial implementation with Nikon support considerations 
    Last Modification Time 2026-03-24T00:00:00Z
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
 
-   name                   camera_type
+   name                   camera_vendor
    version                1.21
    value data type        ASCII_Short_String_Collapsed
-   description            The general type of camera. Corresponds to which type_Metadata class is used in this label. Type=None should not generally be used but is available if none of the type_Metadata classes apply.
+   description            Specifies the camera vendor, make, or manufacturer.
 
    name                   camera_name
    version                1.21
@@ -542,7 +535,7 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      cots_camera:camera_type
+      local identifier      cots_camera:camera_vendor
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -553,11 +546,6 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      cots_camera:Camera_Orientation
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        component_of
-
-      local identifier      cots_camera:Nikon_Metadata
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
@@ -599,44 +587,6 @@ Parsed Input - Classes:
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
-
-   name                   Nikon_Metadata
-   description            This class reproduces Nikon-specific keywords from the EXIF metadata for Nikon Electronic Format (NEF) images. These keywords are generally undocumented, representing parameters for Nikon-specific algorithms and camera capabilities. The keywords that seem most useful are represented in this LDD. Although the meanings are not precisely defined, they can often be inferred at least in a qualitative sense from the name, and the open source community is likely to provide more details over time. Some of the keywords here seem to be redundant with multimission keywords in other LDDs such as Imaging. However, a closer look shows different valid lists and subtle differences in meaning. In these cases we retain both. Some keywords unambiguously match existing Imaging keywords; these are generally not duplicated here. The keywords have been arbitrarily grouped into categories in order to help organize them; these categories are not reflected in the NEF labels themselves.
-   is abstract            false
-   is choice              false
-   subclass of            USER
-
-   Associations
-
-      local identifier      cots_camera:Autofocus
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        component_of
-
-      local identifier      cots_camera:Camera_Properties
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        component_of
-
-      local identifier      cots_camera:Camera_Settings
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        component_of
-
-      local identifier      cots_camera:Exposure
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        component_of
-
-      local identifier      cots_camera:File_Information
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        component_of
-
-      local identifier      cots_camera:Lens_Properties
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        component_of
 
    name                   Autofocus
    description            The Autofocus class contains attributes uses to identify or describe the algorithm and settings used to automatically focus the lens.
