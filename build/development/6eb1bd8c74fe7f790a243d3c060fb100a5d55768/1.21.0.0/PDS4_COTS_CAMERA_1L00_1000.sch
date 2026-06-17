@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:cots_camera  Version:1.0.0.0 - Wed May 13 22:43:20 UTC 2026 -->
+  <!-- PDS4 Schematron for Name Space Id:cots_camera  Version:1.0.0.0 - Wed Jun 17 21:38:01 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.21.0.0 - System Build 14.0 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -107,6 +107,27 @@
     <sch:rule context="cots_camera:Camera_Properties/cots_camera:exit_pupil_position">
       <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
         <title>cots_camera:Camera_Properties/cots_camera:exit_pupil_position/cots_camera:exit_pupil_position</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="cots_camera:Camera_Settings/cots_camera:radial_distortion_coefficient_1">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>cots_camera:Camera_Settings/cots_camera:radial_distortion_coefficient_1/cots_camera:radial_distortion_coefficient_1</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="cots_camera:Camera_Settings/cots_camera:radial_distortion_coefficient_2">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>cots_camera:Camera_Settings/cots_camera:radial_distortion_coefficient_2/cots_camera:radial_distortion_coefficient_2</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="cots_camera:Camera_Settings/cots_camera:radial_distortion_coefficient_3">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>cots_camera:Camera_Settings/cots_camera:radial_distortion_coefficient_3/cots_camera:radial_distortion_coefficient_3</title>
         The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
