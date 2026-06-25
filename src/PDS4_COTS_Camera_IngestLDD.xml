@@ -74,7 +74,7 @@
     <name>camera_name</name>
     <version_id>1.0</version_id>
     <local_identifier>camera_name</local_identifier>
-    <nillable_flag>true</nillable_flag>
+    <nillable_flag>false</nillable_flag>
     <submitter_name>Kevin Gill</submitter_name>
     <definition>The name including model number of the camera. This should be sufficiently precise that someone could go
       purchase a similar camera (assuming they're still being sold).</definition>
