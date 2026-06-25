@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:cots_camera  Version:1.0.0.0 - Tue Jun 23 18:36:03 UTC 2026 -->
-  <!-- Generated from the PDS4 Information Model Version 1.25.0.0 - System Build 16.0	 -->
+  <!-- PDS4 XML/Schema for Name Space Id:cots_camera  Version:1.0.0.0 - Thu Jun 25 21:25:49 UTC 2026 -->
+  <!-- Generated from the PDS4 Information Model Version 1.26.0.0 - System Build 16.1	 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
-  <!-- 1.25.0.0 - pds: - Common Dictionary                                       -->
+  <!-- 1.26.0.0 - pds: - Common Dictionary                                       -->
   <!-- 1.0.0.0 - cots_camera: - COTS Camera                                      -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -15,7 +15,7 @@
     attributeFormDefault="unqualified"
     version="1.0.0.0">
  
-    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1P00.xsd"/>
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1Q00.xsd"/>
  
   <xs:annotation>
     <xs:documentation>
@@ -78,7 +78,7 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element name="camera_vendor" type="cots_camera:camera_vendor" minOccurs="1" maxOccurs="1"> </xs:element>
-      <xs:element name="camera_name" nillable="true" type="cots_camera:camera_name" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="camera_name" type="cots_camera:camera_name" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="Camera_Orientation" type="cots_camera:Camera_Orientation" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -580,19 +580,18 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:complexType name="camera_name">
+  <xs:simpleType name="camera_name">
     <xs:annotation>
       <xs:documentation>The name including model number of the camera.
         This should be sufficiently precise that someone could go
         purchase a similar camera (assuming they're still being
         sold).</xs:documentation>
     </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="pds:ASCII_Short_String_Collapsed">
-        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
 
   <xs:simpleType name="camera_vendor">
     <xs:annotation>
