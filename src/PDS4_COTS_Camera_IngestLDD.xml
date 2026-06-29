@@ -1689,62 +1689,48 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
+      <identifier_reference>Autofocus</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
       <identifier_reference>Camera_Orientation</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-  </DD_Class>
+    <DD_Association>
+      <identifier_reference>Camera_Properties</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>Camera_Settings/identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>Exposure</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>File_Information</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>Lens_Properties</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
 
-  <!-- Class: Camera_Orientation -->
-  <DD_Class>
-    <name>Camera_Orientation</name>
-    <version_id>1.0</version_id>
-    <local_identifier>Camera_Orientation</local_identifier>
-    <submitter_name>Kevin Gill</submitter_name>
-    <definition>This class contains the orientation of the camera derived from its internal sensors. These are usually
-      from tilt sensors in the camera. Note that in non-terrestrial environments these values may be of limited use. For
-      example, tilt sensors are of no use in microgravity, and while they might work on the Moon, yaw generally has to
-      be determined by GPS which is unavailable there. These values are not in the Geometry LDD because of the
-      difficulty of precisely defining the reference coordinate system.</definition>
-    <abstract_flag>false</abstract_flag>
-    <element_flag>false</element_flag>
-    <DD_Association>
-      <identifier_reference>pitch</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>pitch_status</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>roll</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>roll_status</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>yaw</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>yaw_status</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
   </DD_Class>
 
   <!-- Class: Autofocus -->
@@ -1921,6 +1907,57 @@
     </DD_Association>
     <DD_Association>
       <identifier_reference>primary_af_point</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
+  <!-- Class: Camera_Orientation -->
+  <DD_Class>
+    <name>Camera_Orientation</name>
+    <version_id>1.0</version_id>
+    <local_identifier>Camera_Orientation</local_identifier>
+    <submitter_name>Kevin Gill</submitter_name>
+    <definition>This class contains the orientation of the camera derived from its internal sensors. These are usually
+      from tilt sensors in the camera. Note that in non-terrestrial environments these values may be of limited use. For
+      example, tilt sensors are of no use in microgravity, and while they might work on the Moon, yaw generally has to
+      be determined by GPS which is unavailable there. These values are not in the Geometry LDD because of the
+      difficulty of precisely defining the reference coordinate system.</definition>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
+    <DD_Association>
+      <identifier_reference>pitch</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>pitch_status</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>roll</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>roll_status</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>yaw</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>yaw_status</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
