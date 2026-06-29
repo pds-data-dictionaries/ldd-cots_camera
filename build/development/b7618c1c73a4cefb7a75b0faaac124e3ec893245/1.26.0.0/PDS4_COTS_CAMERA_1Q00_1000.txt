@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Jun 25 21:25:49 UTC 2026
+   Time                   Mon Jun 29 23:41:06 UTC 2026
    Common Schema          [PDS4_PDS_1Q00.xsd]
    Common Schematron      [PDS4_PDS_1Q00.sch]
    IM Version Id:         1.26.0.0
@@ -30,7 +30,7 @@ Parameters:
 Summary:
    Classes                8
    Attributes             107
-   Associations           108
+   Associations           114
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -744,48 +744,40 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
+      local identifier      cots_camera:Autofocus
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
       local identifier      cots_camera:Camera_Orientation
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of
 
-   name                   Camera_Orientation
-   description            This class contains the orientation of the camera derived from its internal sensors. These are usually from tilt sensors in the camera. Note that in non-terrestrial environments these values may be of limited use. For example, tilt sensors are of no use in microgravity, and while they might work on the Moon, yaw generally has to be determined by GPS which is unavailable there. These values are not in the Geometry LDD because of the difficulty of precisely defining the reference coordinate system.
-   is abstract            false
-   is choice              false
-   subclass of            USER
-
-   Associations
-
-      local identifier      cots_camera:pitch
+      local identifier      cots_camera:Camera_Properties
       minimum occurrences   0
       maximum occurrences   1
-      reference type        attribute_of
+      reference type        component_of
 
-      local identifier      cots_camera:pitch_status
+      local identifier      cots_camera:Camera_Settings
       minimum occurrences   0
       maximum occurrences   1
-      reference type        attribute_of
+      reference type        component_of
 
-      local identifier      cots_camera:roll
+      local identifier      cots_camera:Exposure
       minimum occurrences   0
       maximum occurrences   1
-      reference type        attribute_of
+      reference type        component_of
 
-      local identifier      cots_camera:roll_status
+      local identifier      cots_camera:File_Information
       minimum occurrences   0
       maximum occurrences   1
-      reference type        attribute_of
+      reference type        component_of
 
-      local identifier      cots_camera:yaw
+      local identifier      cots_camera:Lens_Properties
       minimum occurrences   0
       maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      cots_camera:yaw_status
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
+      reference type        component_of
 
    name                   Autofocus
    description            The Autofocus class contains attributes uses to identify or describe the algorithm and settings used to automatically focus the lens.
@@ -931,6 +923,44 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      cots_camera:primary_af_point
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Camera_Orientation
+   description            This class contains the orientation of the camera derived from its internal sensors. These are usually from tilt sensors in the camera. Note that in non-terrestrial environments these values may be of limited use. For example, tilt sensors are of no use in microgravity, and while they might work on the Moon, yaw generally has to be determined by GPS which is unavailable there. These values are not in the Geometry LDD because of the difficulty of precisely defining the reference coordinate system.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      cots_camera:pitch
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:pitch_status
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:roll
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:roll_status
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:yaw
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:yaw_status
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of

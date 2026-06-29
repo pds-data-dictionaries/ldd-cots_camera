@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:cots_camera  Version:1.0.0.0 - Thu Jun 25 21:25:49 UTC 2026 -->
+  <!-- PDS4 Schematron for Name Space Id:cots_camera  Version:1.0.0.0 - Mon Jun 29 23:41:06 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.26.0.0 - System Build 16.1	 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
