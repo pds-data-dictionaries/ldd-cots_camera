@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Mon Jun 29 23:41:06 UTC 2026
+   Time                   Tue Jun 30 18:27:14 UTC 2026
    Common Schema          [PDS4_PDS_1Q00.xsd]
    Common Schematron      [PDS4_PDS_1Q00.sch]
    IM Version Id:         1.26.0.0
@@ -1011,6 +1011,21 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
+      local identifier      cots_camera:brightness
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:clarity
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:contrast
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
       local identifier      cots_camera:color_balance_version
       minimum occurrences   0
       maximum occurrences   1
@@ -1066,12 +1081,12 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      cots_camera:noise_reduction
+      local identifier      cots_camera:hue
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      cots_camera:hue
+      local identifier      cots_camera:noise_reduction
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -1081,22 +1096,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      cots_camera:contrast
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      cots_camera:brightness
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
       local identifier      cots_camera:sharpness
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      cots_camera:clarity
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -1106,12 +1106,12 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      cots_camera:shutter_mode
+      local identifier      cots_camera:shot_info_version
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      cots_camera:shot_info_version
+      local identifier      cots_camera:shutter_mode
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
