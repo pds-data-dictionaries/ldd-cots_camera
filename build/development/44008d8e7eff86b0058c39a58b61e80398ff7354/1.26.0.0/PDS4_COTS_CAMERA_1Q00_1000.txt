@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Tue Jun 30 18:27:14 UTC 2026
+   Time                   Thu Jul 02 17:26:03 UTC 2026
    Common Schema          [PDS4_PDS_1Q00.xsd]
    Common Schematron      [PDS4_PDS_1Q00.sch]
    IM Version Id:         1.26.0.0
@@ -47,7 +47,7 @@ Parsed Input - Header:
     often contain EXIF-type keywords specific to a given camera model. The intent is to hold metadata that does not fit
     elsewhere. For example, if the IMG LDD has a place to store the metadata, it should generally be used in preference
     to this LDD. ## CHANGE LOG ## 1.0.0.0 - Initial implementation with Nikon support considerations 
-   Last Modification Time 2026-03-24T00:00:00Z
+   Last Modification Time 2026-07-02T00:00:00Z
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -1021,12 +1021,12 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      cots_camera:contrast
+      local identifier      cots_camera:color_balance_version
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      cots_camera:color_balance_version
+      local identifier      cots_camera:contrast
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
