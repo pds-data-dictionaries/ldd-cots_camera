@@ -17,7 +17,7 @@
     often contain EXIF-type keywords specific to a given camera model. The intent is to hold metadata that does not fit
     elsewhere. For example, if the IMG LDD has a place to store the metadata, it should generally be used in preference
     to this LDD. ## CHANGE LOG ## 1.0.0.0 - Initial implementation with Nikon support considerations </comment>
-  <last_modification_date_time>2026-03-24T00:00:00Z</last_modification_date_time>
+  <last_modification_date_time>2026-07-02T00:00:00Z</last_modification_date_time>
 
   <!--                     -->
   <!--  Attributes: BEGIN  -->
@@ -2035,14 +2035,14 @@
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-   <DD_Association>
-      <identifier_reference>contrast</identifier_reference>
+    <DD_Association>
+      <identifier_reference>color_balance_version</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>color_balance_version</identifier_reference>
+      <identifier_reference>contrast</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
