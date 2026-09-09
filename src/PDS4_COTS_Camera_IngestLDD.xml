@@ -2029,7 +2029,7 @@
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-   <DD_Association>
+    <DD_Association>
       <identifier_reference>clarity</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
@@ -2118,14 +2118,14 @@
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association> 
+    </DD_Association>
     <DD_Association>
       <identifier_reference>saturation</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
-     <DD_Association>
+    <DD_Association>
       <identifier_reference>sharpness</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
@@ -2550,5 +2550,4 @@
   </DD_Rule>
 
   <!-- END child checks -->
-
 </Ingest_LDD>
