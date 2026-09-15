@@ -18,6 +18,7 @@ metadata specific to Commercial Off The Shelf (COTS) cameras. It will often cont
 
 ### Steward
 Bob Deen (@rgdeen), Cartography and Imaging Sciences (IMG)
+Kevin Gill (@kmgill), Cartography and Imaging Sciences (IMG)
 <!-- EXAMPLE
      Anne Raugh (@acraugh), Small Bodies Node (SBN)
 -->

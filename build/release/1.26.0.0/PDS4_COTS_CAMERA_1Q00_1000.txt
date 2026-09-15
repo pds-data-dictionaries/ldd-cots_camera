@@ -1,0 +1,1363 @@
+PDS4 Local Data Dictionary Processing Report
+
+Configuration:
+   LDDTool Version        16.1.3
+   LDD Version Id:        1.0.0.0
+   LDD Label Version Id:  1.0
+   LDD Discipline (T/F):  true
+   LDD Namespace URL:     http://pds.nasa.gov/pds4/
+   LDD URN Prefix:        urn:nasa:pds:
+   Time                   Wed Sep 09 18:49:45 UTC 2026
+   Common Schema          [PDS4_PDS_1Q00.xsd]
+   Common Schematron      [PDS4_PDS_1Q00.sch]
+   IM Version Id:         1.26.0.0
+   IM Namespace Id:       pds
+   IM Label Version Id:   1.0
+   IM Object Model        [UpperModel.pont]
+   IM Data Dictionary     [dd11179.pins]
+   IM Glossary            [Glossary.pins]
+   IM Document Spec       [DMDocument.pins]
+
+Parameters:
+   Input File             [/home/runner/work/ldd-cots_camera/ldd-cots_camera/src/PDS4_COTS_Camera_IngestLDD.xml]
+   PDS Processing         true
+   LDD Processing         true
+   Discipline LDD         true
+   Mission LDD            false
+   Write Attr Elements    false
+   Merge with Master      false
+
+Summary:
+   Classes                8
+   Attributes             107
+   Associations           114
+   Error messages         0
+   Warning messages       0
+   Information messages   0
+
+Detailed validation messages
+
+Parsed Input - Header:
+   LDD Name               COTS Camera
+   LDD Version            1.0.0.0
+   Full Name              Gill, Kevin M.
+   Steward                img
+   Namespace Id           cots_camera
+   Comment                 This Discipline LDD is intended for metadata specific to Commercial Off The Shelf (COTS) cameras. It will
+    often contain EXIF-type keywords specific to a given camera model. The intent is to hold metadata that does not fit
+    elsewhere. For example, if the IMG LDD has a place to store the metadata, it should generally be used in preference
+    to this LDD. ## CHANGE LOG ## 1.0.0.0 - Initial implementation with Nikon support considerations 
+   Last Modification Time 2026-07-02T00:00:00Z
+   PDS4 Merge Flag        false
+
+Parsed Input - Attributes:
+
+   name                   camera_vendor
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Specifies the camera vendor, make, or manufacturer.
+
+   name                   camera_name
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            The name including model number of the camera. This should be sufficiently precise that someone could go purchase a similar camera (assuming they're still being sold).
+
+   name                   pitch
+   version                1.26
+   value data type        ASCII_Real
+   description            The pitch angle of the camera body, generally perpendicular to the lens axis.
+   nillable               true
+   unit of measure type   Units_of_Angle
+
+   name                   pitch_status
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the trustworthiness of the pitch measurement. Possible values include "Fine", "Coarse", "Unusable". Note that unusable values may be simply omitted.
+   nillable               true
+
+   name                   roll
+   version                1.26
+   value data type        ASCII_Real
+   description            The roll angle of the camera body, generally about the lens axis.
+   nillable               true
+   unit of measure type   Units_of_Angle
+
+   name                   roll_status
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the trustworthiness of the roll measurement. Possible values include "Fine", "Coarse", "Unusable". Note that unusable values may be simply omitted.
+   nillable               true
+
+   name                   yaw
+   version                1.26
+   value data type        ASCII_Real
+   description            The yaw angle of the camera body, generally about the vertical axis at the camera location.
+   nillable               true
+   unit of measure type   Units_of_Angle
+
+   name                   yaw_status
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the trustworthiness of the yaw measurement. Possible values include "Fine", "Coarse", "Unusable". Note that unusable values may be simply omitted.
+   nillable               true
+
+   name                   af_aperture
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            The size of the lens opening, or aperture value, which controls the amount of light entering the camera during autofocusing.
+   nillable               true
+
+   name                   af_area_initial_height
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Specifies the initial height in pixels of the square autofocus box.
+   nillable               true
+   minimum value          0
+
+   name                   af_area_initial_width
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Specifies the initial width in pixels of the square autofocus box.
+   nillable               true
+   minimum value          0
+
+   name                   af_area_initial_x_position
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Specifies the X (horizontal) coordinate of the starting point of the dynamic autofocus area.
+   nillable               true
+   minimum value          0
+
+   name                   af_area_initial_y_position
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Specifies the Y (vertical) coordinate of the starting point of the dynamic autofocus area.
+   nillable               true
+   minimum value          0
+
+   name                   af_area_mode
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Refers to the autofocus mode selected for focusing. Includes Single Point, Dynamic Area, and/or Auto Area AF. Mode availability depends on the capabilities of a specific camera model.
+   nillable               true
+
+   name                   af_area_height
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Specifies the height of the autofocus box when the picture was taken
+   nillable               true
+   minimum value          0
+
+   name                   af_area_width
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Specifies the width of the autofocus box when the picture was taken
+   nillable               true
+   minimum value          0
+
+   name                   af_area_x_position
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Specifies the X (horizontal) coordinate of the dynamic autofocus area.
+   nillable               true
+   minimum value          0
+
+   name                   af_area_y_position
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Specifies the Y (vertical) coordinate of the dynamic autofocus area.
+   nillable               true
+   minimum value          0
+
+   name                   af_c_priority_selection
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates whether the camera will prioritize achieving focus or shot capture while in continuous autofocus mode and if the subject cannot be quickly locked on. Focus Priority will only capture a photograph once the subject has been properly focused. Release Priority will take a shot regardless of whether or not focus has been achieved.
+   nillable               true
+
+   name                   af_coordinates_available
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates whether or not autofocus coordinates are available.
+   nillable               true
+
+   name                   af_detection_method
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Refers to the method the autofocus system uses to detect focus. This can include methods such as Contrast Detection or Phase Detection, depending on the capabilities of the camera model.
+   nillable               true
+
+   name                   af_fine_tune
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Details, typically expressed in micro-adjustments (e.g., +5 or -10), on any calibration made to the autofocus system to improve accuracy.
+   nillable               true
+
+   name                   af_image_height
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Height of the image sensor, used in autofocus calculations
+   nillable               true
+   minimum value          0
+
+   name                   af_image_width
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Width of the image sensor, used in autofocus calculations
+   nillable               true
+   minimum value          0
+
+   name                   af_info_2_version
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the version number of the camera's autofocus information.
+   nillable               true
+
+   name                   af_point_brightness
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Refers to the intensity of the indicator that shows which focus point(s) are selected.
+   nillable               true
+
+   name                   af_points_in_focus
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates how many of the selected autofocus points achieved focus on the subject.
+   nillable               true
+
+   name                   af_points_used
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates how many autofocus points where actively engaged during the shot.
+   nillable               true
+
+   name                   af_s_priority_selection
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates whether the camera prioritizes on achieving a sharp focus before allowing the shutter to release in single autofocus mode. Focus Priority will only release the shutter once it has achieved focus on the subject. Release Priority will allow the shutter to be released even if focus has not been achieved.
+   nillable               true
+
+   name                   block_shot_af_response
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Describes the camera's autofocus behaviour when shooting in burst mode. This indicates whether focus is locked for the entire burst or adjusted between shots.
+   nillable               true
+
+   name                   focus_point_schema
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Describes the arragements or pattern of selected autofocus points.
+   nillable               true
+
+   name                   focus_point_wrap
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates whether focus points wrap around when reaching the edge of the selection grid. Typically On or Off.
+   nillable               true
+
+   name                   focus_result
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates whether autofocus thinks the image is in focus or not
+   nillable               true
+
+   name                   focus_shift_shooting
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Automates focus stacking by capturing a sequence of images at incrementally changing focus distances
+   nillable               true
+
+   name                   number_of_focus_points
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Indicates how many autofocus points are available to the camera.
+   nillable               true
+   minimum value          0
+
+   name                   primary_af_point
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Specifies which autofocus point was primary when autofocusing. Typically expressed as an X, Y coordinate or numerical identifier of the autofocus point in use.
+   nillable               true
+
+   name                   exit_pupil_position
+   version                1.26
+   value data type        ASCII_Real
+   description            Indicates the location of the exit pupil relative to the camera body or lens mount. This is typically measured in millimeters, affecting how light enters the camera. 
+   nillable               true
+   unit of measure type   Units_of_Length
+
+   name                   flash_info_version
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the version of the flash-related metadata recorded. 
+   nillable               true
+
+   name                   raw_image_center_line
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Specifies the coordinates of the center of the raw image as captired by the sensor
+   nillable               true
+   minimum value          0
+
+   name                   raw_image_center_sample
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            TODO
+   nillable               true
+   minimum value          0
+
+   name                   shutter_count
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Indicates the number of times the camera's shutter has been actuated since it's first use. 
+   nillable               true
+   minimum value          0
+
+   name                   bracket_set
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Records the specific type of bracketing enabled in the camera
+   nillable               true
+
+   name                   brightness
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Measures the overall lightness or darkness of the image as captured
+   nillable               true
+
+   name                   clarity
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the setting adjustment of the midtone contrast of an image. This adjustment affects the perceived sharpness and detail, specially the midtones, enhancing the overall texture without significantly altering highlights and shadows.
+   nillable               true
+
+   name                   color_balance_version
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the version of the color balance adjustments or algorithms applied to the image.
+   nillable               true
+
+   name                   contrast
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Reflects the difference in brightness between the darkest and lightest parts of the image.
+   nillable               true
+
+   name                   custom_settings_bank
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Numeric identifier representing the custom settings bank in use (e.g. Bank 1, Bank 2). The Custom Settings Bank allows users to store and select customized camera settings for specific shooting scenarios.
+   nillable               true
+
+   name                   diffraction_compensation
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Applies sharpening to mitigate the softening effects of diffraction at small apertures
+   nillable               true
+
+   name                   distortion_correction
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates whether distortion correction is applied
+   nillable               true
+
+   name                   radial_distortion_coefficient_1
+   version                1.26
+   value data type        ASCII_Real
+   description            First coefficient (A) of a polynomial warp algorithm, similar to Brown's distortion model. Calculates the corrected radius (r') as a function of distortied radius from the center of the image (r) and the coefficients A,B,C via: r' = Ar^3 + Br^2 + Cr
+   nillable               true
+   unit of measure type   Units_of_Length
+
+   name                   radial_distortion_coefficient_2
+   version                1.26
+   value data type        ASCII_Real
+   description            Second coefficient (B) of a polynomial warp algorithm, similar to Brown's distortion model. Calculates the corrected radius (r') as a function of distortied radius from the center of the image (r) and the coefficients A,B,C via: r' = Ar^3 + Br^2 + Cr
+   nillable               true
+   unit of measure type   Units_of_Length
+
+   name                   radial_distortion_coefficient_3
+   version                1.26
+   value data type        ASCII_Real
+   description            Third coefficient (C) of a polynomial warp algorithm, similar to Brown's distortion model. Calculates the corrected radius (r') as a function of distortied radius from the center of the image (r) and the coefficients A,B,C via: r' = Ar^3 + Br^2 + Cr
+   nillable               true
+   unit of measure type   Units_of_Length
+
+   name                   flash_mode
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Specifies the specific settings for the flash during the exposure, such as Normal or Red-Eye Reduction.
+   nillable               true
+
+   name                   flicker_reduction
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Refers to a feature that helps reduce the effects of flickering light sources, such as flourescent or LED lights, which can cause banding or unwanted color shifts in images. Flicker reduction aims to synchronize the camera's shutter speed with the frequency of flickering lights, minimizing artifacts and ensuring more consistent exposure and color balance. 
+   nillable               true
+
+   name                   flicker_reduction_indicator
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates whether flicker reduction was used during the exposure, expressed as On or Off.
+   nillable               true
+
+   name                   high_iso_noise_reduction
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the method used in applying High ISO Noise Reduction.
+   nillable               true
+
+   name                   noise_reduction
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Refers to whether the camera applied noise reduction algorithms to high-ISO images. Typically shown as On or Off.
+   nillable               true
+
+   name                   hue
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            A numeric scale or percentage of adjustment to the overall color tint of the image.
+   nillable               true
+
+   name                   saturation
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            A numeric scale or percentage of intensity of colors in the image.
+   nillable               true
+
+   name                   sharpness
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Refers to the clarity and detail in the image expressed in a numerical scale (e.g., 0 to 100)
+   nillable               true
+
+   name                   shooting_mode
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the camera mode at the time of capture, affecting settings like focus and exposure. Includes Single Shot, Continuous, or Timer, depending on the capabilities of the camera.
+   nillable               true
+
+   name                   shutter_mode
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates shutter mode (for example, mechanical vs. electronic)
+   nillable               true
+
+   name                   shot_info_version
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the version of detailed shooting parameters used for parsing specific camera settings.
+   nillable               true
+
+   name                   vibration_reduction_type
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Specifies the method used for vibration reduction stabilization. This includes mechanisms such as lens-based (VR/Optical), in-body (IBIS), and synchro VR.
+   nillable               true
+
+   name                   vignette_control
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates whether the camera applied any correction for vignetting (brightness fall-off around corners).
+   nillable               true
+
+   name                   vignette_coefficient_1
+   version                1.26
+   value data type        ASCII_Real
+   description            First coefficient for vignette correction polynomial.
+   nillable               true
+
+   name                   vignette_coefficient_2
+   version                1.26
+   value data type        ASCII_Real
+   description            Second coefficient for vignette correction polynomial.
+   nillable               true
+
+   name                   vignette_coefficient_3
+   version                1.26
+   value data type        ASCII_Real
+   description            Third coefficient for vignette correction polynomial.
+   nillable               true
+
+   name                   auto_bracket_mode_m
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Refers to the specific mode used for exposure bracketing, often expressed in terms of settings. Could include modes like Exposure, Flash, or White Balance bracketing.
+   nillable               true
+
+   name                   auto_bracket_order
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Denotes the order in which bracketed images are taken, such as whether they are taken from underexposed to overexposed, or vice versa.
+   nillable               true
+
+   name                   burst_group_id
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            A number assigned to all expsoures in a burst group within a single press of the shutter.
+   nillable               true
+   minimum value          0
+
+   name                   center_weighted_area_size
+   version                1.26
+   value data type        ASCII_Real
+   description            Defines the portion of the frame that the camera evaluates for exposure in Center-Weighted metering mode. This is typically expressed as a percentage.
+   nillable               true
+   unit of measure type   Units_of_Length
+
+   name                   cl_mode_shooting_speed
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Continuous Low mode shooting speed indicates the frame rate at which the camera captures image in continuous low mode. Usually expressed in frames per second (fps).
+   nillable               true
+
+   name                   easy_exposure_compensation
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates whether the +/- button was needed to set exposure compensation with the main command dial
+   nillable               true
+
+   name                   exposure_bracket_value
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the amount by which exposure is varied in a series of bracketed shots. Represented in stops (e.g., +/- 1.0)
+   nillable               true
+
+   name                   exposure_comp_step_size
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Exposure compensation is a setting that allows the photographer to adjust the standard exposure determined by the camera's metering system. The exposure compensation step size defines the increments used when moving the compensation value up (overexposure) or down (underexposure).
+   nillable               true
+
+   name                   exposure_control_step_size
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Exposure correction increment per click of the dial when adjusting camera settings such as aperture, shutter speed, or exposure compensation increments.
+   nillable               true
+
+   name                   exposure_delay_mode
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates wether an exposure delay was employed prior to releasing the shutter.
+   nillable               true
+
+   name                   exposure_difference
+   version                1.26
+   value data type        ASCII_Real
+   description            Records how much the exposure deviates from the camera's metered exposure. Often expressed in stops (e.g., +1.0 or -0.5)
+   nillable               true
+
+   name                   high_frame_rate
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            High-Speed Frame Capture mode
+   nillable               true
+
+   name                   iso_auto_high_limit
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Specifies the maximum ISO sensitivity that the camera will automatically adjust to when in Auto ISO mode.
+   nillable               true
+
+   name                   iso_auto_shutter_time
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the maximum shutter speed that the camera will use when set to Auto ISO mode. This defines the slowest shutter speed at which the camera will operate to avoid motion blur when increasing ISO sensitivity.
+   nillable               true
+
+   name                   iso_step_size
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the increments made in changes to ISO sensitivity.
+   nillable               true
+
+   name                   max_continuous_release
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Specifies the maximum number of shots the camera can take in a continuous shooting burst.
+   nillable               true
+   minimum value          0
+
+   name                   multi_exposure_auto_gain
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates whether automatic gain control was applied to balance exposure across multiple exposures, typically On or Off.
+   nillable               true
+
+   name                   multi_exposure_mode
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates which multiple exposure mode was used. Series takes a series of multiple exposures per shot resulting in multiple files. Single Photo will create only a single combined image.
+   nillable               true
+
+   name                   multi_exposure_overlay_mode
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates how multiple shots are blended into a single final image
+   nillable               true
+
+   name                   multi_exposure_shots
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Denotes the number of exposures combined into a single image.
+   nillable               true
+   minimum value          0
+
+   name                   multi_exposure_version
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the version of the multi-exposure settings used in the camera.
+   nillable               true
+
+   name                   directory_number
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Designates the folder or directory within the memory card that contains the file
+   nillable               true
+   minimum value          0
+
+   name                   file_info_version
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the version of the metadata structure of the file itself. 
+   nillable               true
+
+   name                   file_number
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Refers to the unique identifier assigned to the image file, typically a sequential number.
+   nillable               true
+   minimum value          0
+
+   name                   memory_card_number
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Indicates the specific memory card in the camera where the image was saved, particaraly in cameras with more than one card slots.
+   nillable               true
+   minimum value          0
+
+   name                   offset_time
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Time zone offset for the general file modification date/time. Note that time zones may not be defined for space missions (generally UTC is used), but the camera may be set for some time zone.
+   nillable               true
+
+   name                   offset_time_digitized
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Time zone offset corresponding to the moment the digital file was created. Note that time zones may not be defined for space missions (generally UTC is used), but the camera may be set for some time zone.
+   nillable               true
+
+   name                   offset_time_original
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Time zone offset corresponding to the moment the photo was actually taken. Note that time zones may not be defined for space missions (generally UTC is used), but the camera may be set for some time zone.
+   nillable               true
+
+   name                   effective_max_aperture
+   version                1.26
+   value data type        ASCII_Real
+   description            Indicates the largest aperture (in terms of light-gathering ability) used during the exposure, which may differ from the physical maximum aperture due to verious settings or conditions. This is expressed as an f-stop (e.g., f/4.0).
+   nillable               true
+
+   name                   lens_data_version
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Signifies the version of the lens information records which may include updates specifications or characteristics 
+   nillable               true
+
+   name                   lens_f_stops
+   version                1.26
+   value data type        ASCII_Real
+   description            Refers to the maximum and minimum aperture settings available on the lens. This is expressed in f-stop values (e.g., f/2.8 to f/22)
+   nillable               true
+
+   name                   lens_id_number
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Indicates a unique numeric identifier corresponding to the lens model used for the image capture.
+   nillable               true
+   minimum value          0
+
+   name                   lens_mount_type
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Indicates the type of lens mount
+   nillable               true
+
+   name                   lens_type
+   version                1.26
+   value data type        ASCII_Short_String_Collapsed
+   description            Identifies the generation and techology of the attached lens, expressed as a numerical value which can be correlated to identifiers using specialized metadata types such as ExifTool.
+   nillable               true
+
+   name                   max_aperture_at_max_focal
+   version                1.26
+   value data type        ASCII_Real
+   description            Indicates the widest aperture setting when the lens is at its maximum focal length, expressed as an f-stop (e.g., f/4.0)
+   nillable               true
+
+   name                   max_aperture_at_min_focal
+   version                1.26
+   value data type        ASCII_Real
+   description            Indicates the widest aperture setting when the lens is at its minimum focal length, expressed as an f-stop (e.g., f/4.0)
+   nillable               true
+
+   name                   max_focal_length
+   version                1.26
+   value data type        ASCII_Real
+   description            Indicates the longest distance, in millimeters, that the lens can focus on.
+   nillable               true
+   unit of measure type   Units_of_Length
+
+   name                   min_focal_length
+   version                1.26
+   value data type        ASCII_Real
+   description            Denotes the shortest distance, in millimeters, that the lens can focus on while still producing a sharp image.
+   nillable               true
+   unit of measure type   Units_of_Length
+
+   name                   mcu_version
+   version                1.26
+   value data type        ASCII_NonNegative_Integer
+   description            Represents the version of the microcontroller unit (MCU) firmware in the camera body that processes the images. 
+   nillable               true
+   minimum value          0
+
+Parsed Input - Classes:
+
+   name                   COTS_Camera
+   description            This Discipline LDD is intended for metadata specific to Commercial Off The Shelf (COTS) cameras. It will often contain EXIF-type keywords specific to a given camera model. The intent is to hold metadata that does not fit elsewhere. For example, if the IMG LDD has a place to store the metadata, it should generally be used in preference to this LDD.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      cots_camera:camera_vendor
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:camera_name
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:Autofocus
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      cots_camera:Camera_Orientation
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      cots_camera:Camera_Properties
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      cots_camera:Camera_Settings
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      cots_camera:Exposure
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      cots_camera:File_Information
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      cots_camera:Lens_Properties
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+   name                   Autofocus
+   description            The Autofocus class contains attributes uses to identify or describe the algorithm and settings used to automatically focus the lens.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      cots_camera:af_aperture
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_area_initial_height
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_area_initial_width
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_area_initial_x_position
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_area_initial_y_position
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_area_mode
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_area_height
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_area_width
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_area_x_position
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_area_y_position
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_c_priority_selection
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_coordinates_available
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_detection_method
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_fine_tune
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_image_height
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_image_width
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_info_2_version
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_point_brightness
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_points_in_focus
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_points_used
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:af_s_priority_selection
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:block_shot_af_response
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:focus_point_schema
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:focus_point_wrap
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:focus_result
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:focus_shift_shooting
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:number_of_focus_points
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:primary_af_point
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Camera_Orientation
+   description            This class contains the orientation of the camera derived from its internal sensors. These are usually from tilt sensors in the camera. Note that in non-terrestrial environments these values may be of limited use. For example, tilt sensors are of no use in microgravity, and while they might work on the Moon, yaw generally has to be determined by GPS which is unavailable there. These values are not in the Geometry LDD because of the difficulty of precisely defining the reference coordinate system.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      cots_camera:pitch
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:pitch_status
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:roll
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:roll_status
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:yaw
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:yaw_status
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Camera_Properties
+   description            The Camera_Properties contains parameters describing various physical properties of the camera
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      cots_camera:exit_pupil_position
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:flash_info_version
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:raw_image_center_line
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:raw_image_center_sample
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:shutter_count
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Camera_Settings
+   description            The Camera_Settings class contains parameters describing shooting mode, processing, and image correction controls.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      cots_camera:bracket_set
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:brightness
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:clarity
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:color_balance_version
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:contrast
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:custom_settings_bank
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:diffraction_compensation
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:distortion_correction
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:radial_distortion_coefficient_1
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:radial_distortion_coefficient_2
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:radial_distortion_coefficient_3
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:flash_mode
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:flicker_reduction
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:flicker_reduction_indicator
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:high_iso_noise_reduction
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:hue
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:noise_reduction
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:saturation
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:sharpness
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:shooting_mode
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:shot_info_version
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:shutter_mode
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:vibration_reduction_type
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:vignette_control
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:vignette_coefficient_1
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:vignette_coefficient_2
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:vignette_coefficient_3
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Exposure
+   description            The Exposure class contains attributes identifying camera exposure configuration. This includes single shot, exposure bracketing, and burst mode operations.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      cots_camera:auto_bracket_mode_m
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:auto_bracket_order
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:burst_group_id
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:center_weighted_area_size
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:cl_mode_shooting_speed
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:easy_exposure_compensation
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:exposure_bracket_value
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:exposure_comp_step_size
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:exposure_control_step_size
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:exposure_delay_mode
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:exposure_difference
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:high_frame_rate
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:iso_auto_high_limit
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:iso_auto_shutter_time
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:iso_step_size
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:max_continuous_release
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:multi_exposure_auto_gain
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:multi_exposure_mode
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:multi_exposure_overlay_mode
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:multi_exposure_shots
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:multi_exposure_version
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   File_Information
+   description            The File_Information class describes attributes pertaining to the image file location on disk storage and unique sequence identifier
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      cots_camera:directory_number
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:file_info_version
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:file_number
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:memory_card_number
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:offset_time
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:offset_time_digitized
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:offset_time_original
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Lens_Properties
+   description            The Lens_Properties class contains attributes describing the physical properties, identification, and capabilities of the lens in use when the shot was taken.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      cots_camera:effective_max_aperture
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:lens_data_version
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:lens_f_stops
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:lens_id_number
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:lens_mount_type
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:lens_type
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:max_aperture_at_max_focal
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:max_aperture_at_min_focal
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:max_focal_length
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:min_focal_length
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      cots_camera:mcu_version
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+End of Report

@@ -1,0 +1,1705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!-- PDS4 XML/Schema for Name Space Id:cots_camera  Version:1.0.0.0 - Wed Sep 09 18:49:45 UTC 2026 -->
+  <!-- Generated from the PDS4 Information Model Version 1.26.0.0 - System Build 16.1	 -->
+  <!-- *** This PDS4 product schema is an operational deliverable. *** -->
+  <!--                                                                           -->
+  <!--               Dictionary Stack                                            -->
+  <!-- 1.26.0.0 - pds: - Common Dictionary                                       -->
+  <!-- 1.0.0.0 - cots_camera: - COTS Camera                                      -->
+  <!--                                                                           -->
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://pds.nasa.gov/pds4/cots_camera/v1"
+    xmlns:cots_camera="http://pds.nasa.gov/pds4/cots_camera/v1"
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="1.0.0.0">
+ 
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1Q00.xsd"/>
+ 
+  <xs:annotation>
+    <xs:documentation>
+ This Discipline LDD is intended for metadata specific to Commercial Off The Shelf (COTS) cameras. It will
+    often contain EXIF-type keywords specific to a given camera model. The intent is to hold metadata that does not fit
+    elsewhere. For example, if the IMG LDD has a place to store the metadata, it should generally be used in preference
+    to this LDD. ## CHANGE LOG ## 1.0.0.0 - Initial implementation with Nikon support considerations 
+    </xs:documentation>
+  </xs:annotation>
+ 
+  <xs:element name="COTS_Camera" type="cots_camera:COTS_Camera"> </xs:element>
+
+  <xs:complexType name="Autofocus">
+    <xs:annotation>
+      <xs:documentation>The Autofocus class contains attributes uses to
+        identify or describe the algorithm and settings used to
+        automatically focus the lens.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="af_aperture" nillable="true" type="cots_camera:af_aperture" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_area_initial_height" nillable="true" type="cots_camera:af_area_initial_height" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_area_initial_width" nillable="true" type="cots_camera:af_area_initial_width" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_area_initial_x_position" nillable="true" type="cots_camera:af_area_initial_x_position" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_area_initial_y_position" nillable="true" type="cots_camera:af_area_initial_y_position" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_area_mode" nillable="true" type="cots_camera:af_area_mode" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_area_height" nillable="true" type="cots_camera:af_area_height" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_area_width" nillable="true" type="cots_camera:af_area_width" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_area_x_position" nillable="true" type="cots_camera:af_area_x_position" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_area_y_position" nillable="true" type="cots_camera:af_area_y_position" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_c_priority_selection" nillable="true" type="cots_camera:af_c_priority_selection" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_coordinates_available" nillable="true" type="cots_camera:af_coordinates_available" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_detection_method" nillable="true" type="cots_camera:af_detection_method" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_fine_tune" nillable="true" type="cots_camera:af_fine_tune" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_image_height" nillable="true" type="cots_camera:af_image_height" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_image_width" nillable="true" type="cots_camera:af_image_width" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_info_2_version" nillable="true" type="cots_camera:af_info_2_version" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_point_brightness" nillable="true" type="cots_camera:af_point_brightness" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_points_in_focus" nillable="true" type="cots_camera:af_points_in_focus" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_points_used" nillable="true" type="cots_camera:af_points_used" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="af_s_priority_selection" nillable="true" type="cots_camera:af_s_priority_selection" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="block_shot_af_response" nillable="true" type="cots_camera:block_shot_af_response" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="focus_point_schema" nillable="true" type="cots_camera:focus_point_schema" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="focus_point_wrap" nillable="true" type="cots_camera:focus_point_wrap" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="focus_result" nillable="true" type="cots_camera:focus_result" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="focus_shift_shooting" nillable="true" type="cots_camera:focus_shift_shooting" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="number_of_focus_points" nillable="true" type="cots_camera:number_of_focus_points" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="primary_af_point" nillable="true" type="cots_camera:primary_af_point" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="COTS_Camera">
+    <xs:annotation>
+      <xs:documentation>This Discipline LDD is intended for metadata
+        specific to Commercial Off The Shelf (COTS) cameras. It will
+        often contain EXIF-type keywords specific to a given camera
+        model. The intent is to hold metadata that does not fit
+        elsewhere. For example, if the IMG LDD has a place to store the
+        metadata, it should generally be used in preference to this
+        LDD.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="camera_vendor" type="cots_camera:camera_vendor" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="camera_name" type="cots_camera:camera_name" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Autofocus" type="cots_camera:Autofocus" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Camera_Orientation" type="cots_camera:Camera_Orientation" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Camera_Properties" type="cots_camera:Camera_Properties" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Camera_Settings" type="cots_camera:Camera_Settings" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Exposure" type="cots_camera:Exposure" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="File_Information" type="cots_camera:File_Information" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Lens_Properties" type="cots_camera:Lens_Properties" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Camera_Orientation">
+    <xs:annotation>
+      <xs:documentation>This class contains the orientation of the
+        camera derived from its internal sensors. These are usually from
+        tilt sensors in the camera. Note that in non-terrestrial
+        environments these values may be of limited use. For example,
+        tilt sensors are of no use in microgravity, and while they might
+        work on the Moon, yaw generally has to be determined by GPS
+        which is unavailable there. These values are not in the Geometry
+        LDD because of the difficulty of precisely defining the
+        reference coordinate system.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="pitch" nillable="true" type="cots_camera:pitch" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="pitch_status" nillable="true" type="cots_camera:pitch_status" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="roll" nillable="true" type="cots_camera:roll" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="roll_status" nillable="true" type="cots_camera:roll_status" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="yaw" nillable="true" type="cots_camera:yaw" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="yaw_status" nillable="true" type="cots_camera:yaw_status" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Camera_Properties">
+    <xs:annotation>
+      <xs:documentation>The Camera_Properties contains parameters
+        describing various physical properties of the
+        camera</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="exit_pupil_position" nillable="true" type="cots_camera:exit_pupil_position" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="flash_info_version" nillable="true" type="cots_camera:flash_info_version" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="raw_image_center_line" nillable="true" type="cots_camera:raw_image_center_line" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="raw_image_center_sample" nillable="true" type="cots_camera:raw_image_center_sample" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="shutter_count" nillable="true" type="cots_camera:shutter_count" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Camera_Settings">
+    <xs:annotation>
+      <xs:documentation>The Camera_Settings class contains parameters
+        describing shooting mode, processing, and image correction
+        controls.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="bracket_set" nillable="true" type="cots_camera:bracket_set" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="brightness" nillable="true" type="cots_camera:brightness" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="clarity" nillable="true" type="cots_camera:clarity" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="color_balance_version" nillable="true" type="cots_camera:color_balance_version" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="contrast" nillable="true" type="cots_camera:contrast" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="custom_settings_bank" nillable="true" type="cots_camera:custom_settings_bank" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="diffraction_compensation" nillable="true" type="cots_camera:diffraction_compensation" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="distortion_correction" nillable="true" type="cots_camera:distortion_correction" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="radial_distortion_coefficient_1" nillable="true" type="cots_camera:radial_distortion_coefficient_1" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="radial_distortion_coefficient_2" nillable="true" type="cots_camera:radial_distortion_coefficient_2" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="radial_distortion_coefficient_3" nillable="true" type="cots_camera:radial_distortion_coefficient_3" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="flash_mode" nillable="true" type="cots_camera:flash_mode" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="flicker_reduction" nillable="true" type="cots_camera:flicker_reduction" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="flicker_reduction_indicator" nillable="true" type="cots_camera:flicker_reduction_indicator" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="high_iso_noise_reduction" nillable="true" type="cots_camera:high_iso_noise_reduction" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="hue" nillable="true" type="cots_camera:hue" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="noise_reduction" nillable="true" type="cots_camera:noise_reduction" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="saturation" nillable="true" type="cots_camera:saturation" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="sharpness" nillable="true" type="cots_camera:sharpness" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="shooting_mode" nillable="true" type="cots_camera:shooting_mode" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="shot_info_version" nillable="true" type="cots_camera:shot_info_version" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="shutter_mode" nillable="true" type="cots_camera:shutter_mode" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="vibration_reduction_type" nillable="true" type="cots_camera:vibration_reduction_type" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="vignette_control" nillable="true" type="cots_camera:vignette_control" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="vignette_coefficient_1" nillable="true" type="cots_camera:vignette_coefficient_1" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="vignette_coefficient_2" nillable="true" type="cots_camera:vignette_coefficient_2" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="vignette_coefficient_3" nillable="true" type="cots_camera:vignette_coefficient_3" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Exposure">
+    <xs:annotation>
+      <xs:documentation>The Exposure class contains attributes
+        identifying camera exposure configuration. This includes single
+        shot, exposure bracketing, and burst mode
+        operations.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="auto_bracket_mode_m" nillable="true" type="cots_camera:auto_bracket_mode_m" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="auto_bracket_order" nillable="true" type="cots_camera:auto_bracket_order" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="burst_group_id" nillable="true" type="cots_camera:burst_group_id" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="center_weighted_area_size" nillable="true" type="cots_camera:center_weighted_area_size" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="cl_mode_shooting_speed" nillable="true" type="cots_camera:cl_mode_shooting_speed" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="easy_exposure_compensation" nillable="true" type="cots_camera:easy_exposure_compensation" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="exposure_bracket_value" nillable="true" type="cots_camera:exposure_bracket_value" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="exposure_comp_step_size" nillable="true" type="cots_camera:exposure_comp_step_size" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="exposure_control_step_size" nillable="true" type="cots_camera:exposure_control_step_size" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="exposure_delay_mode" nillable="true" type="cots_camera:exposure_delay_mode" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="exposure_difference" nillable="true" type="cots_camera:exposure_difference" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="high_frame_rate" nillable="true" type="cots_camera:high_frame_rate" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="iso_auto_high_limit" nillable="true" type="cots_camera:iso_auto_high_limit" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="iso_auto_shutter_time" nillable="true" type="cots_camera:iso_auto_shutter_time" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="iso_step_size" nillable="true" type="cots_camera:iso_step_size" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="max_continuous_release" nillable="true" type="cots_camera:max_continuous_release" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="multi_exposure_auto_gain" nillable="true" type="cots_camera:multi_exposure_auto_gain" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="multi_exposure_mode" nillable="true" type="cots_camera:multi_exposure_mode" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="multi_exposure_overlay_mode" nillable="true" type="cots_camera:multi_exposure_overlay_mode" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="multi_exposure_shots" nillable="true" type="cots_camera:multi_exposure_shots" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="multi_exposure_version" nillable="true" type="cots_camera:multi_exposure_version" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="File_Information">
+    <xs:annotation>
+      <xs:documentation>The File_Information class describes attributes
+        pertaining to the image file location on disk storage and unique
+        sequence identifier</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="directory_number" nillable="true" type="cots_camera:directory_number" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="file_info_version" nillable="true" type="cots_camera:file_info_version" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="file_number" nillable="true" type="cots_camera:file_number" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="memory_card_number" nillable="true" type="cots_camera:memory_card_number" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="offset_time" nillable="true" type="cots_camera:offset_time" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="offset_time_digitized" nillable="true" type="cots_camera:offset_time_digitized" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="offset_time_original" nillable="true" type="cots_camera:offset_time_original" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Lens_Properties">
+    <xs:annotation>
+      <xs:documentation>The Lens_Properties class contains attributes
+        describing the physical properties, identification, and
+        capabilities of the lens in use when the shot was
+        taken.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="effective_max_aperture" nillable="true" type="cots_camera:effective_max_aperture" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="lens_data_version" nillable="true" type="cots_camera:lens_data_version" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="lens_f_stops" nillable="true" type="cots_camera:lens_f_stops" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="lens_id_number" nillable="true" type="cots_camera:lens_id_number" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="lens_mount_type" nillable="true" type="cots_camera:lens_mount_type" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="lens_type" nillable="true" type="cots_camera:lens_type" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="max_aperture_at_max_focal" nillable="true" type="cots_camera:max_aperture_at_max_focal" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="max_aperture_at_min_focal" nillable="true" type="cots_camera:max_aperture_at_min_focal" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="max_focal_length" nillable="true" type="cots_camera:max_focal_length" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="min_focal_length" nillable="true" type="cots_camera:min_focal_length" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="mcu_version" nillable="true" type="cots_camera:mcu_version" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+    <xs:annotation>
+      <xs:documentation>This section contains the simpleTypes that provide more constraints
+        than those at the base data type level. The simpleTypes defined here build on the base data
+        types. This is another component of the common dictionary and therefore falls within the
+        common namespace.
+      </xs:documentation>
+    </xs:annotation>
+
+  <xs:complexType name="af_aperture">
+    <xs:annotation>
+      <xs:documentation>The size of the lens opening, or aperture value,
+        which controls the amount of light entering the camera during
+        autofocusing.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_area_height">
+    <xs:annotation>
+      <xs:documentation>Specifies the height of the autofocus box when
+        the picture was taken</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_area_initial_height">
+    <xs:annotation>
+      <xs:documentation>Specifies the initial height in pixels of the
+        square autofocus box.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_area_initial_width">
+    <xs:annotation>
+      <xs:documentation>Specifies the initial width in pixels of the
+        square autofocus box.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_area_initial_x_position">
+    <xs:annotation>
+      <xs:documentation>Specifies the X (horizontal) coordinate of the
+        starting point of the dynamic autofocus area.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_area_initial_y_position">
+    <xs:annotation>
+      <xs:documentation>Specifies the Y (vertical) coordinate of the
+        starting point of the dynamic autofocus area.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_area_mode">
+    <xs:annotation>
+      <xs:documentation>Refers to the autofocus mode selected for
+        focusing. Includes Single Point, Dynamic Area, and/or Auto Area
+        AF. Mode availability depends on the capabilities of a specific
+        camera model.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_area_width">
+    <xs:annotation>
+      <xs:documentation>Specifies the width of the autofocus box when
+        the picture was taken</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_area_x_position">
+    <xs:annotation>
+      <xs:documentation>Specifies the X (horizontal) coordinate of the
+        dynamic autofocus area.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_area_y_position">
+    <xs:annotation>
+      <xs:documentation>Specifies the Y (vertical) coordinate of the
+        dynamic autofocus area.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_c_priority_selection">
+    <xs:annotation>
+      <xs:documentation>Indicates whether the camera will prioritize
+        achieving focus or shot capture while in continuous autofocus
+        mode and if the subject cannot be quickly locked on. Focus
+        Priority will only capture a photograph once the subject has
+        been properly focused. Release Priority will take a shot
+        regardless of whether or not focus has been
+        achieved.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_coordinates_available">
+    <xs:annotation>
+      <xs:documentation>Indicates whether or not autofocus coordinates
+        are available.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_detection_method">
+    <xs:annotation>
+      <xs:documentation>Refers to the method the autofocus system uses
+        to detect focus. This can include methods such as Contrast
+        Detection or Phase Detection, depending on the capabilities of
+        the camera model.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_fine_tune">
+    <xs:annotation>
+      <xs:documentation>Details, typically expressed in
+        micro-adjustments (e.g., +5 or -10), on any calibration made to
+        the autofocus system to improve accuracy.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_image_height">
+    <xs:annotation>
+      <xs:documentation>Height of the image sensor, used in autofocus
+        calculations</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_image_width">
+    <xs:annotation>
+      <xs:documentation>Width of the image sensor, used in autofocus
+        calculations</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_info_2_version">
+    <xs:annotation>
+      <xs:documentation>Indicates the version number of the camera's
+        autofocus information.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_point_brightness">
+    <xs:annotation>
+      <xs:documentation>Refers to the intensity of the indicator that
+        shows which focus point(s) are selected.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_points_in_focus">
+    <xs:annotation>
+      <xs:documentation>Indicates how many of the selected autofocus
+        points achieved focus on the subject.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_points_used">
+    <xs:annotation>
+      <xs:documentation>Indicates how many autofocus points where
+        actively engaged during the shot.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="af_s_priority_selection">
+    <xs:annotation>
+      <xs:documentation>Indicates whether the camera prioritizes on
+        achieving a sharp focus before allowing the shutter to release
+        in single autofocus mode. Focus Priority will only release the
+        shutter once it has achieved focus on the subject. Release
+        Priority will allow the shutter to be released even if focus has
+        not been achieved.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="auto_bracket_mode_m">
+    <xs:annotation>
+      <xs:documentation>Refers to the specific mode used for exposure
+        bracketing, often expressed in terms of settings. Could include
+        modes like Exposure, Flash, or White Balance
+        bracketing.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="auto_bracket_order">
+    <xs:annotation>
+      <xs:documentation>Denotes the order in which bracketed images are
+        taken, such as whether they are taken from underexposed to
+        overexposed, or vice versa.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="block_shot_af_response">
+    <xs:annotation>
+      <xs:documentation>Describes the camera's autofocus behaviour when
+        shooting in burst mode. This indicates whether focus is locked
+        for the entire burst or adjusted between
+        shots.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="bracket_set">
+    <xs:annotation>
+      <xs:documentation>Records the specific type of bracketing enabled
+        in the camera</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="brightness">
+    <xs:annotation>
+      <xs:documentation>Measures the overall lightness or darkness of
+        the image as captured</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="burst_group_id">
+    <xs:annotation>
+      <xs:documentation>A number assigned to all expsoures in a burst
+        group within a single press of the shutter.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="camera_name">
+    <xs:annotation>
+      <xs:documentation>The name including model number of the camera.
+        This should be sufficiently precise that someone could go
+        purchase a similar camera (assuming they're still being
+        sold).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="camera_vendor">
+    <xs:annotation>
+      <xs:documentation>Specifies the camera vendor, make, or
+        manufacturer.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="center_weighted_area_size_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="center_weighted_area_size">
+    <xs:annotation>
+      <xs:documentation>Defines the portion of the frame that the camera
+        evaluates for exposure in Center-Weighted metering mode. This is
+        typically expressed as a percentage.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="cots_camera:center_weighted_area_size_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="cl_mode_shooting_speed">
+    <xs:annotation>
+      <xs:documentation>Continuous Low mode shooting speed indicates the
+        frame rate at which the camera captures image in continuous low
+        mode. Usually expressed in frames per second
+        (fps).</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="clarity">
+    <xs:annotation>
+      <xs:documentation>Indicates the setting adjustment of the midtone
+        contrast of an image. This adjustment affects the perceived
+        sharpness and detail, specially the midtones, enhancing the
+        overall texture without significantly altering highlights and
+        shadows.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="color_balance_version">
+    <xs:annotation>
+      <xs:documentation>Indicates the version of the color balance
+        adjustments or algorithms applied to the
+        image.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="contrast">
+    <xs:annotation>
+      <xs:documentation>Reflects the difference in brightness between
+        the darkest and lightest parts of the image.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="custom_settings_bank">
+    <xs:annotation>
+      <xs:documentation>Numeric identifier representing the custom
+        settings bank in use (e.g. Bank 1, Bank 2). The Custom Settings
+        Bank allows users to store and select customized camera settings
+        for specific shooting scenarios.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="diffraction_compensation">
+    <xs:annotation>
+      <xs:documentation>Applies sharpening to mitigate the softening
+        effects of diffraction at small apertures</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="directory_number">
+    <xs:annotation>
+      <xs:documentation>Designates the folder or directory within the
+        memory card that contains the file</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="distortion_correction">
+    <xs:annotation>
+      <xs:documentation>Indicates whether distortion correction is
+        applied</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="easy_exposure_compensation">
+    <xs:annotation>
+      <xs:documentation>Indicates whether the +/- button was needed to
+        set exposure compensation with the main command
+        dial</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="effective_max_aperture">
+    <xs:annotation>
+      <xs:documentation>Indicates the largest aperture (in terms of
+        light-gathering ability) used during the exposure, which may
+        differ from the physical maximum aperture due to verious
+        settings or conditions. This is expressed as an f-stop (e.g.,
+        f/4.0).</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Real">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="exit_pupil_position_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="exit_pupil_position">
+    <xs:annotation>
+      <xs:documentation>Indicates the location of the exit pupil
+        relative to the camera body or lens mount. This is typically
+        measured in millimeters, affecting how light enters the camera.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="cots_camera:exit_pupil_position_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="exposure_bracket_value">
+    <xs:annotation>
+      <xs:documentation>Indicates the amount by which exposure is varied
+        in a series of bracketed shots. Represented in stops (e.g., +/-
+        1.0)</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="exposure_comp_step_size">
+    <xs:annotation>
+      <xs:documentation>Exposure compensation is a setting that allows
+        the photographer to adjust the standard exposure determined by
+        the camera's metering system. The exposure compensation step
+        size defines the increments used when moving the compensation
+        value up (overexposure) or down
+        (underexposure).</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="exposure_control_step_size">
+    <xs:annotation>
+      <xs:documentation>Exposure correction increment per click of the
+        dial when adjusting camera settings such as aperture, shutter
+        speed, or exposure compensation increments.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="exposure_delay_mode">
+    <xs:annotation>
+      <xs:documentation>Indicates wether an exposure delay was employed
+        prior to releasing the shutter.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="exposure_difference">
+    <xs:annotation>
+      <xs:documentation>Records how much the exposure deviates from the
+        camera's metered exposure. Often expressed in stops (e.g., +1.0
+        or -0.5)</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Real">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="file_info_version">
+    <xs:annotation>
+      <xs:documentation>Indicates the version of the metadata structure
+        of the file itself. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="file_number">
+    <xs:annotation>
+      <xs:documentation>Refers to the unique identifier assigned to the
+        image file, typically a sequential number.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="flash_info_version">
+    <xs:annotation>
+      <xs:documentation>Indicates the version of the flash-related
+        metadata recorded. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="flash_mode">
+    <xs:annotation>
+      <xs:documentation>Specifies the specific settings for the flash
+        during the exposure, such as Normal or Red-Eye
+        Reduction.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="flicker_reduction">
+    <xs:annotation>
+      <xs:documentation>Refers to a feature that helps reduce the
+        effects of flickering light sources, such as flourescent or LED
+        lights, which can cause banding or unwanted color shifts in
+        images. Flicker reduction aims to synchronize the camera's
+        shutter speed with the frequency of flickering lights,
+        minimizing artifacts and ensuring more consistent exposure and
+        color balance. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="flicker_reduction_indicator">
+    <xs:annotation>
+      <xs:documentation>Indicates whether flicker reduction was used
+        during the exposure, expressed as On or Off.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="focus_point_schema">
+    <xs:annotation>
+      <xs:documentation>Describes the arragements or pattern of selected
+        autofocus points.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="focus_point_wrap">
+    <xs:annotation>
+      <xs:documentation>Indicates whether focus points wrap around when
+        reaching the edge of the selection grid. Typically On or
+        Off.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="focus_result">
+    <xs:annotation>
+      <xs:documentation>Indicates whether autofocus thinks the image is
+        in focus or not</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="focus_shift_shooting">
+    <xs:annotation>
+      <xs:documentation>Automates focus stacking by capturing a sequence
+        of images at incrementally changing focus
+        distances</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="high_frame_rate">
+    <xs:annotation>
+<xs:documentation>High-Speed Frame Capture mode</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="high_iso_noise_reduction">
+    <xs:annotation>
+      <xs:documentation>Indicates the method used in applying High ISO
+        Noise Reduction.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="hue">
+    <xs:annotation>
+      <xs:documentation>A numeric scale or percentage of adjustment to
+        the overall color tint of the image.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="iso_auto_high_limit">
+    <xs:annotation>
+      <xs:documentation>Specifies the maximum ISO sensitivity that the
+        camera will automatically adjust to when in Auto ISO
+        mode.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="iso_auto_shutter_time">
+    <xs:annotation>
+      <xs:documentation>Indicates the maximum shutter speed that the
+        camera will use when set to Auto ISO mode. This defines the
+        slowest shutter speed at which the camera will operate to avoid
+        motion blur when increasing ISO sensitivity.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="iso_step_size">
+    <xs:annotation>
+      <xs:documentation>Indicates the increments made in changes to ISO
+        sensitivity.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="lens_data_version">
+    <xs:annotation>
+      <xs:documentation>Signifies the version of the lens information
+        records which may include updates specifications or
+        characteristics </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="lens_f_stops">
+    <xs:annotation>
+      <xs:documentation>Refers to the maximum and minimum aperture
+        settings available on the lens. This is expressed in f-stop
+        values (e.g., f/2.8 to f/22)</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Real">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="lens_id_number">
+    <xs:annotation>
+      <xs:documentation>Indicates a unique numeric identifier
+        corresponding to the lens model used for the image
+        capture.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="lens_mount_type">
+    <xs:annotation>
+      <xs:documentation>Indicates the type of lens
+        mount</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="lens_type">
+    <xs:annotation>
+      <xs:documentation>Identifies the generation and techology of the
+        attached lens, expressed as a numerical value which can be
+        correlated to identifiers using specialized metadata types such
+        as ExifTool.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="max_aperture_at_max_focal">
+    <xs:annotation>
+      <xs:documentation>Indicates the widest aperture setting when the
+        lens is at its maximum focal length, expressed as an f-stop
+        (e.g., f/4.0)</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Real">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="max_aperture_at_min_focal">
+    <xs:annotation>
+      <xs:documentation>Indicates the widest aperture setting when the
+        lens is at its minimum focal length, expressed as an f-stop
+        (e.g., f/4.0)</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Real">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="max_continuous_release">
+    <xs:annotation>
+      <xs:documentation>Specifies the maximum number of shots the camera
+        can take in a continuous shooting burst.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="max_focal_length_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="max_focal_length">
+    <xs:annotation>
+      <xs:documentation>Indicates the longest distance, in millimeters,
+        that the lens can focus on.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="cots_camera:max_focal_length_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="mcu_version">
+    <xs:annotation>
+      <xs:documentation>Represents the version of the microcontroller
+        unit (MCU) firmware in the camera body that processes the
+        images. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="memory_card_number">
+    <xs:annotation>
+      <xs:documentation>Indicates the specific memory card in the camera
+        where the image was saved, particaraly in cameras with more than
+        one card slots.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="min_focal_length_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="min_focal_length">
+    <xs:annotation>
+      <xs:documentation>Denotes the shortest distance, in millimeters,
+        that the lens can focus on while still producing a sharp
+        image.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="cots_camera:min_focal_length_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="multi_exposure_auto_gain">
+    <xs:annotation>
+      <xs:documentation>Indicates whether automatic gain control was
+        applied to balance exposure across multiple exposures, typically
+        On or Off.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="multi_exposure_mode">
+    <xs:annotation>
+      <xs:documentation>Indicates which multiple exposure mode was used.
+        Series takes a series of multiple exposures per shot resulting
+        in multiple files. Single Photo will create only a single
+        combined image.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="multi_exposure_overlay_mode">
+    <xs:annotation>
+      <xs:documentation>Indicates how multiple shots are blended into a
+        single final image</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="multi_exposure_shots">
+    <xs:annotation>
+      <xs:documentation>Denotes the number of exposures combined into a
+        single image.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="multi_exposure_version">
+    <xs:annotation>
+      <xs:documentation>Indicates the version of the multi-exposure
+        settings used in the camera.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="noise_reduction">
+    <xs:annotation>
+      <xs:documentation>Refers to whether the camera applied noise
+        reduction algorithms to high-ISO images. Typically shown as On
+        or Off.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="number_of_focus_points">
+    <xs:annotation>
+      <xs:documentation>Indicates how many autofocus points are
+        available to the camera.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="offset_time">
+    <xs:annotation>
+      <xs:documentation>Time zone offset for the general file
+        modification date/time. Note that time zones may not be defined
+        for space missions (generally UTC is used), but the camera may
+        be set for some time zone.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="offset_time_digitized">
+    <xs:annotation>
+      <xs:documentation>Time zone offset corresponding to the moment the
+        digital file was created. Note that time zones may not be
+        defined for space missions (generally UTC is used), but the
+        camera may be set for some time zone.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="offset_time_original">
+    <xs:annotation>
+      <xs:documentation>Time zone offset corresponding to the moment the
+        photo was actually taken. Note that time zones may not be
+        defined for space missions (generally UTC is used), but the
+        camera may be set for some time zone.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="pitch_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="pitch">
+    <xs:annotation>
+      <xs:documentation>The pitch angle of the camera body, generally
+        perpendicular to the lens axis.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="cots_camera:pitch_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="pitch_status">
+    <xs:annotation>
+      <xs:documentation>Indicates the trustworthiness of the pitch
+        measurement. Possible values include "Fine", "Coarse",
+        "Unusable". Note that unusable values may be simply
+        omitted.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="primary_af_point">
+    <xs:annotation>
+      <xs:documentation>Specifies which autofocus point was primary when
+        autofocusing. Typically expressed as an X, Y coordinate or
+        numerical identifier of the autofocus point in
+        use.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="radial_distortion_coefficient_1_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="radial_distortion_coefficient_1">
+    <xs:annotation>
+      <xs:documentation>First coefficient (A) of a polynomial warp
+        algorithm, similar to Brown's distortion model. Calculates the
+        corrected radius (r') as a function of distortied radius from
+        the center of the image (r) and the coefficients A,B,C via: r' =
+        Ar^3 + Br^2 + Cr</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="cots_camera:radial_distortion_coefficient_1_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="radial_distortion_coefficient_2_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="radial_distortion_coefficient_2">
+    <xs:annotation>
+      <xs:documentation>Second coefficient (B) of a polynomial warp
+        algorithm, similar to Brown's distortion model. Calculates the
+        corrected radius (r') as a function of distortied radius from
+        the center of the image (r) and the coefficients A,B,C via: r' =
+        Ar^3 + Br^2 + Cr</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="cots_camera:radial_distortion_coefficient_2_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="radial_distortion_coefficient_3_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="radial_distortion_coefficient_3">
+    <xs:annotation>
+      <xs:documentation>Third coefficient (C) of a polynomial warp
+        algorithm, similar to Brown's distortion model. Calculates the
+        corrected radius (r') as a function of distortied radius from
+        the center of the image (r) and the coefficients A,B,C via: r' =
+        Ar^3 + Br^2 + Cr</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="cots_camera:radial_distortion_coefficient_3_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="raw_image_center_line">
+    <xs:annotation>
+      <xs:documentation>Specifies the coordinates of the center of the
+        raw image as captired by the sensor</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="raw_image_center_sample">
+    <xs:annotation>
+<xs:documentation>TODO</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="roll_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="roll">
+    <xs:annotation>
+      <xs:documentation>The roll angle of the camera body, generally
+        about the lens axis.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="cots_camera:roll_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="roll_status">
+    <xs:annotation>
+      <xs:documentation>Indicates the trustworthiness of the roll
+        measurement. Possible values include "Fine", "Coarse",
+        "Unusable". Note that unusable values may be simply
+        omitted.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="saturation">
+    <xs:annotation>
+      <xs:documentation>A numeric scale or percentage of intensity of
+        colors in the image.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="sharpness">
+    <xs:annotation>
+      <xs:documentation>Refers to the clarity and detail in the image
+        expressed in a numerical scale (e.g., 0 to
+        100)</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="shooting_mode">
+    <xs:annotation>
+      <xs:documentation>Indicates the camera mode at the time of
+        capture, affecting settings like focus and exposure. Includes
+        Single Shot, Continuous, or Timer, depending on the capabilities
+        of the camera.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="shot_info_version">
+    <xs:annotation>
+      <xs:documentation>Indicates the version of detailed shooting
+        parameters used for parsing specific camera
+        settings.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="shutter_count">
+    <xs:annotation>
+      <xs:documentation>Indicates the number of times the camera's
+        shutter has been actuated since it's first use.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_NonNegative_Integer">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="shutter_mode">
+    <xs:annotation>
+      <xs:documentation>Indicates shutter mode (for example, mechanical
+        vs. electronic)</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="vibration_reduction_type">
+    <xs:annotation>
+      <xs:documentation>Specifies the method used for vibration
+        reduction stabilization. This includes mechanisms such as
+        lens-based (VR/Optical), in-body (IBIS), and synchro
+        VR.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="vignette_coefficient_1">
+    <xs:annotation>
+      <xs:documentation>First coefficient for vignette correction
+        polynomial.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Real">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="vignette_coefficient_2">
+    <xs:annotation>
+      <xs:documentation>Second coefficient for vignette correction
+        polynomial.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Real">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="vignette_coefficient_3">
+    <xs:annotation>
+      <xs:documentation>Third coefficient for vignette correction
+        polynomial.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Real">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="vignette_control">
+    <xs:annotation>
+      <xs:documentation>Indicates whether the camera applied any
+        correction for vignetting (brightness fall-off around
+        corners).</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="yaw_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="yaw">
+    <xs:annotation>
+      <xs:documentation>The yaw angle of the camera body, generally
+        about the vertical axis at the camera
+        location.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="cots_camera:yaw_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="yaw_status">
+    <xs:annotation>
+      <xs:documentation>Indicates the trustworthiness of the yaw
+        measurement. Possible values include "Fine", "Coarse",
+        "Unusable". Note that unusable values may be simply
+        omitted.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="pds:ASCII_Short_String_Collapsed">
+        <xs:attribute name="nilReason" type="pds:nil_reason" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>
