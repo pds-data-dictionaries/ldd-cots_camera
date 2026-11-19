@@ -1,10 +1,10 @@
 
->>  INFO LDDTOOL Version: 16.1.3
+>>  INFO LDDTOOL Version: 16.3.2
 >>  INFO IM Version Id: 1.26.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Wed Sep 09 18:49:45 UTC 2026
->>  INFO PARENT_DIR: /tmp/lddtool-16.1.3/Data/
+>>  INFO Date: Thu Nov 19 22:29:41 UTC 2026
+>>  INFO PARENT_DIR: /tmp/lddtool-16.3.2/Data/
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:cots_camera
 >>> INFO Init:  - Config.Properties Namespace Id Using:cots_camera
@@ -151,6 +151,7 @@ Input:
      - IM Version: 1Q00
      - PDS4 Flag: true
      - LDD Flag: true
+     - IM Version: true
      - Export JSON Flag: true
 
      - Ingest LDD(s): /home/runner/work/ldd-cots_camera/ldd-cots_camera/src/PDS4_COTS_Camera_IngestLDD.xml

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:cots_camera  Version:1.0.0.0 - Wed Sep 09 18:49:45 UTC 2026 -->
+  <!-- PDS4 Schematron for Name Space Id:cots_camera  Version:1.0.0.0 - Thu Nov 19 22:29:41 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.26.0.0 - System Build 16.1	 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -80,76 +80,6 @@
         <title>//cots_camera:Lens_Properties/Rule</title>
         COTS_Camera:error:lens_properties_child_check: cots_camera:Lens_Properties must have at least 1
         attribute or class specified.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cots_camera:Camera_Orientation/cots_camera:pitch">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>cots_camera:Camera_Orientation/cots_camera:pitch/cots_camera:pitch</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cots_camera:Camera_Orientation/cots_camera:roll">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>cots_camera:Camera_Orientation/cots_camera:roll/cots_camera:roll</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cots_camera:Camera_Orientation/cots_camera:yaw">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>cots_camera:Camera_Orientation/cots_camera:yaw/cots_camera:yaw</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cots_camera:Camera_Properties/cots_camera:exit_pupil_position">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>cots_camera:Camera_Properties/cots_camera:exit_pupil_position/cots_camera:exit_pupil_position</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cots_camera:Camera_Settings/cots_camera:radial_distortion_coefficient_1">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>cots_camera:Camera_Settings/cots_camera:radial_distortion_coefficient_1/cots_camera:radial_distortion_coefficient_1</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cots_camera:Camera_Settings/cots_camera:radial_distortion_coefficient_2">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>cots_camera:Camera_Settings/cots_camera:radial_distortion_coefficient_2/cots_camera:radial_distortion_coefficient_2</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cots_camera:Camera_Settings/cots_camera:radial_distortion_coefficient_3">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>cots_camera:Camera_Settings/cots_camera:radial_distortion_coefficient_3/cots_camera:radial_distortion_coefficient_3</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cots_camera:Exposure/cots_camera:center_weighted_area_size">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>cots_camera:Exposure/cots_camera:center_weighted_area_size/cots_camera:center_weighted_area_size</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cots_camera:Lens_Properties/cots_camera:max_focal_length">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>cots_camera:Lens_Properties/cots_camera:max_focal_length/cots_camera:max_focal_length</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="cots_camera:Lens_Properties/cots_camera:min_focal_length">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>cots_camera:Lens_Properties/cots_camera:min_focal_length/cots_camera:min_focal_length</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>
